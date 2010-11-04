@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_height="fill_parent"
+	android:layout_width="fill_parent" android:keepScreenOn="true">
+	<android.gesture.GestureOverlayView
+		android:eventsInterceptionEnabled="true" android:id="@+id/gestures"
+		android:layout_width="wrap_content" android:layout_height="fill_parent"
+		android:layout_weight="0.5">
+		<ImageView android:layout_height="fill_parent" android:id="@+id/imgPPT"
+			android:layout_width="fill_parent"></ImageView>
+	</android.gesture.GestureOverlayView>
+	<LinearLayout android:id="@+id/LinearLayout02"
+		android:orientation="vertical" android:layout_gravity="right"
+		android:layout_height="fill_parent" android:layout_width="75px"
+		android:paddingLeft="5px" android:paddingRight="5px"
+		android:paddingTop="5px" android:paddingBottom="5px">
+		<ToggleButton android:id="@+id/tbtnDraw" android:text="Draw" android:textOff="Draw"
+			android:textOn="Slide" android:layout_width="fill_parent" android:layout_height="60px"></ToggleButton>
+		<ImageButton android:id="@+id/btnNext"
+			android:src="@drawable/ic_menu_forward" android:layout_width="fill_parent" android:layout_height="wrap_content"></ImageButton>
+		<ImageButton android:id="@+id/btnPrev"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_back"></ImageButton>
+	</LinearLayout>
+</LinearLayout>
