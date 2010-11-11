@@ -92,8 +92,16 @@ namespace droidRemotePPT.Server
         public void StartBluetooth()
         {
             Listening = true;
-            bl = new BluetoothListener(ServiceGUID);
-            bl.Start();
+            try
+            {
+                bl = new BluetoothListener(ServiceGUID);
+                bl.Start();
+            }
+            catch
+            {
+                NotSupported = true;
+                return;
+            }
 
             thread = new Thread(new ThreadStart(ListenLoop));
             thread.Start();
