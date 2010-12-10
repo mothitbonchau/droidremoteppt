@@ -18,6 +18,11 @@ namespace droidRemotePPT.Server
             app.Visible = MsoTriState.msoCTrue;
         }
 
+        public PPTConnection(PPT.Application app)
+        {
+            this.app = app;
+        }
+
         public PPT.Application App
         {
             get
@@ -39,6 +44,11 @@ namespace droidRemotePPT.Server
     public class PPTController : PPTConnection
     {
         public PPTController()
+        {
+        }
+
+        public PPTController(PPT.Application application)
+            : base(application)
         {
         }
 
