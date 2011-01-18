@@ -94,11 +94,16 @@ public class RemoteControl extends Activity implements
 			}
 		});
 	}
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		btThread.stopThread();
+	}
 
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		btThread.stopThread();
 	}
 	
 	@Override

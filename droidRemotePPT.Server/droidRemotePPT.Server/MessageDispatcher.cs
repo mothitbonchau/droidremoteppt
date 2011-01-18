@@ -52,6 +52,11 @@ namespace droidRemotePPT.Server
                 {
                     ScreenSizeMessage ssm = (ScreenSizeMessage)msg;
                     ScreenSize = new Size(Math.Max(ssm.Width, ssm.Height), Math.Min(ssm.Width, ssm.Height));
+                    // Limit to 600x400
+                    if (ScreenSize.Width > 600)
+                    {
+                        ScreenSize = new Size(600, 400);
+                    }
                 }
                 else if (msg is DrawMessage)
                 {
