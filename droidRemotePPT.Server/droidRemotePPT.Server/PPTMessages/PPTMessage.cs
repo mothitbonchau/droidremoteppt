@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace droidRemotePPT.Server.PPTMessages
 {
@@ -100,13 +101,28 @@ namespace droidRemotePPT.Server.PPTMessages
 
     public class SlideChangedMessage : PPTMessage
     {
+        private static ImageCodecInfo GetCodecInfo(string mimeType)
+        {
+            foreach (ImageCodecInfo encoder in ImageCodecInfo.GetImageEncoders())
+                if (encoder.MimeType == mimeType)
+                    return encoder;
+            throw new ArgumentOutOfRangeException(
+                string.Format("'{0}' not supported", mimeType));
+        }
+
         byte[] bytes = null;
         public SlideChangedMessage(Image img)
         {
             using (var ms = new System.IO.MemoryStream())
             {
+                //var enc = GetCodecInfo("image/jpeg");
+                //var eps = new EncoderParameters(1);
+                //eps.Param[0] = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 8L);
+
+                //img.Save(ms, enc, eps);
                 img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
                 bytes = ms.ToArray();
+                System.Diagnostics.Debug.WriteLine("ImageSize = {0}", bytes.Length);
             }
         }
 

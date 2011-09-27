@@ -11,6 +11,8 @@ namespace droidRemotePPT.Server
     public class MessageDispatcher
     {
         public Size ScreenSize = new Size();
+        // More makes no sense, BT will take too long
+        public static readonly Size MaxScreenSize = new Size(320, 200); 
 
         public MessageDispatcher(BluetoothServer btServer, PPTController pptController)
         {
@@ -52,10 +54,10 @@ namespace droidRemotePPT.Server
                 {
                     ScreenSizeMessage ssm = (ScreenSizeMessage)msg;
                     ScreenSize = new Size(Math.Max(ssm.Width, ssm.Height), Math.Min(ssm.Width, ssm.Height));
-                    // Limit to 600x400
-                    if (ScreenSize.Width > 600)
+                    // Limit to MaxScreenSize
+                    if (ScreenSize.Width > MaxScreenSize.Width)
                     {
-                        ScreenSize = new Size(600, 400);
+                        ScreenSize = MaxScreenSize;
                     }
                 }
                 else if (msg is DrawMessage)
