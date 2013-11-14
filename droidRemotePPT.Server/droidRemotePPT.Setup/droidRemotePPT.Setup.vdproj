@@ -51,6 +51,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_40A1CE7F5E7ABCA531E73ACDDC4A3240"
+        "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_86D782C28B3778208B9CA91C2082DF5C"
         "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
         "MsmSig" = "8:_UNDEFINED"
@@ -63,14 +69,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A239983426D8EC1747207EBA5F582088"
+        "MsmKey" = "8:_93F8DA6621194555884A9E545612251C"
         "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_AC5F526C618FCD1DCB550CE16B8ECF25"
-        "OwnerKey" = "8:_A239983426D8EC1747207EBA5F582088"
+        "OwnerKey" = "8:_40A1CE7F5E7ABCA531E73ACDDC4A3240"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -94,25 +100,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3D511F1EBD0D4C1D7AE295D8B9C60673"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_AC5F526C618FCD1DCB550CE16B8ECF25"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A239983426D8EC1747207EBA5F582088"
+        "OwnerKey" = "8:_40A1CE7F5E7ABCA531E73ACDDC4A3240"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -143,6 +143,18 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_910DCFAE37913DFC812BF0C50B710771"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3D511F1EBD0D4C1D7AE295D8B9C60673"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_93F8DA6621194555884A9E545612251C"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -317,6 +329,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_40A1CE7F5E7ABCA531E73ACDDC4A3240"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:droidRemotePPT.Server, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_40A1CE7F5E7ABCA531E73ACDDC4A3240"
+                    {
+                    "Name" = "8:droidRemotePPT.Server.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:droidRemotePPT.Server.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_86D782C28B3778208B9CA91C2082DF5C"
             {
             "AssemblyRegister" = "3:1"
@@ -379,20 +422,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A239983426D8EC1747207EBA5F582088"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_93F8DA6621194555884A9E545612251C"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:droidRemotePPT.Server, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_A239983426D8EC1747207EBA5F582088"
+                    "_93F8DA6621194555884A9E545612251C"
                     {
-                    "Name" = "8:droidRemotePPT.Server.exe"
+                    "Name" = "8:stdole.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:droidRemotePPT.Server.exe"
+            "SourcePath" = "8:stdole.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
@@ -406,7 +449,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:TRUE"
+            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -529,7 +572,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Droid Remote PPT"
         "ProductCode" = "8:{F870382B-CCA8-489D-B3A5-F604BAF24E50}"
-        "PackageCode" = "8:{5FA1614A-FA09-429C-B453-E05709D33E62}"
+        "PackageCode" = "8:{BAE41DF6-F330-4ECC-BE13-270F2B12C953}"
         "UpgradeCode" = "8:{10400565-3F8E-47AF-BD98-5326361602B8}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -537,15 +580,15 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:dasz.at OG"
+        "Manufacturer" = "8:zaczek.net"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Droid Remote PPT"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:dasz.at OG"
+        "ARPCONTACT" = "8:zaczek.net"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Remote control Powerpoint with Android"
-        "ARPURLINFOABOUT" = "8:http://dasz.at"
+        "ARPURLINFOABOUT" = "8:https://code.google.com/p/droidremoteppt/"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
@@ -1064,7 +1107,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_1E94E59DF99147D6B17FA3998EFAF8BD"
             {
-            "SourcePath" = "8:..\\droidRemotePPT.PowerPointAddIn\\obj\\Debug\\droidRemotePPT.PowerPointAddIn.dll"
+            "SourcePath" = "8:..\\droidRemotePPT.PowerPointAddIn\\obj\\Release\\droidRemotePPT.PowerPointAddIn.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
@@ -1092,7 +1135,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
             {
-            "SourcePath" = "8:..\\droidRemotePPT.Server\\obj\\x86\\Debug\\droidRemotePPT.Server.exe"
+            "SourcePath" = "8:..\\droidRemotePPT.Server\\obj\\x86\\Release\\droidRemotePPT.Server.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
