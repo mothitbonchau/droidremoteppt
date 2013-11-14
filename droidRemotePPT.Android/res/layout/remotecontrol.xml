@@ -1,44 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:keepScreenOn="true"
-    android:orientation="horizontal" >
+    android:gravity="bottom"
+    android:keepScreenOn="true" >
 
 	<android.gesture.GestureOverlayView
 		android:eventsInterceptionEnabled="true" android:id="@+id/gestures"
-		android:layout_width="wrap_content" android:layout_height="fill_parent"
-		android:layout_weight="0.5">
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent">
 		<ImageView 
 		    android:layout_height="fill_parent" 
 		    android:id="@+id/imgPPT"
 		    android:scaleType="fitCenter"
 			android:layout_width="fill_parent"></ImageView>
 	</android.gesture.GestureOverlayView>
-
-	<LinearLayout
-	    android:id="@+id/LinearLayout02"
-	    android:layout_width="75dp"
-	    android:layout_height="fill_parent"
-	    android:layout_gravity="right"
-	    android:orientation="vertical"
-	    android:paddingBottom="5dp"
-	    android:paddingLeft="5dp"
-	    android:paddingRight="5dp"
-	    android:paddingTop="5dp" >
-
-		<ImageButton
-		    android:id="@+id/btnNext"
+		<RelativeLayout
+		    android:id="@+id/LinearLayout02"
 		    android:layout_width="fill_parent"
-		    android:layout_height="50dp"
-		    android:src="@drawable/ic_menu_forward" >
-</ImageButton>
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:layout_alignParentBottom="true"		    
+		    android:paddingBottom="5dp"
+		    android:paddingLeft="5dp"
+		    android:paddingRight="5dp"
+		    android:paddingTop="5dp" >
 
-		<ImageButton
-		    android:id="@+id/btnPrev"
-		    android:layout_width="fill_parent"
-		    android:layout_height="50dp"
-		    android:src="@drawable/ic_menu_back" >
-</ImageButton>
-	</LinearLayout>
-</LinearLayout>
+		    <ImageButton		        
+		        android:id="@+id/btnNext"
+		        android:layout_width="wrap_content"
+		        android:layout_height="50dp"
+		        android:layout_alignParentRight="true"
+		        android:src="@drawable/ic_menu_forward" />
+
+		    <ImageButton
+		        android:id="@+id/btnPrev"
+		        android:layout_width="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_height="50dp"
+		        android:src="@drawable/ic_menu_back" />
+		</RelativeLayout>
+</RelativeLayout>
