@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical" android:layout_width="fill_parent"
-	android:layout_height="fill_parent" android:paddingLeft="10px" android:paddingBottom="10px" android:paddingRight="10px" android:paddingTop="10px">
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:paddingLeft="10dp" 
+	android:paddingBottom="10dp" 
+	android:paddingRight="10dp" 
+	android:paddingTop="10dp">
 	<TextView android:layout_width="fill_parent"
-		android:layout_height="wrap_content" android:text="Android PPT Remote Controller"
+		android:layout_height="wrap_content" 
+		android:text="Android PPT Remote Controller"
 		android:textSize="10pt" />
 	<TextView android:layout_width="fill_parent"
-		android:layout_height="wrap_content" android:text="Tab on a device to connect and start" android:layout_marginTop="10px"/>
-	<ListView android:id="@+id/lstDevices" android:layout_width="fill_parent"
-		android:layout_height="fill_parent" android:layout_marginTop="20px"></ListView>
+		android:layout_height="wrap_content" 
+		android:text="Tab on a device to connect and start" 
+		android:layout_marginTop="10dp"/>
+	<ListView android:id="@+id/lstDevices" 
+	    android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:layout_marginTop="20dp"></ListView>
 </LinearLayout>
