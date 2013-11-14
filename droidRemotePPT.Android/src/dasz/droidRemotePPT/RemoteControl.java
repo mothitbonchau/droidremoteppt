@@ -36,7 +36,6 @@ public class RemoteControl extends Activity implements
 	private ImageView imgView;
 	private GestureOverlayView gestView;
 	private GestureLibrary mGestureLibrary;
-	private ToggleButton tbtnDraw;
 	private ImageButton btnNext;
 	private ImageButton btnPrev;
 	private BluetoothThread btThread;
@@ -74,7 +73,6 @@ public class RemoteControl extends Activity implements
 
 		imgView = (ImageView) findViewById(R.id.imgPPT);
 		gestView = (GestureOverlayView) findViewById(R.id.gestures);
-		tbtnDraw = (ToggleButton) findViewById(R.id.tbtnDraw);
 		btnNext = (ImageButton) findViewById(R.id.btnNext);
 		btnPrev = (ImageButton) findViewById(R.id.btnPrev);
 
@@ -94,7 +92,7 @@ public class RemoteControl extends Activity implements
 			}
 		});
 	}
-	
+
 	@Override
 	protected void onPause() {
 		super.onPause();
@@ -105,7 +103,7 @@ public class RemoteControl extends Activity implements
 	protected void onDestroy() {
 		super.onDestroy();
 	}
-	
+
 	@Override
 	protected void onStart() {
 		super.onStart();
@@ -124,11 +122,11 @@ public class RemoteControl extends Activity implements
 		imgView.setScaleType(ScaleType.FIT_XY);
 		imgView.setImageBitmap(bmp);
 	}
-	
+
 	@Override
 	public void onWindowFocusChanged(boolean hasFocus) {
 		super.onWindowFocusChanged(hasFocus);
-		if(hasFocus) {
+		if (hasFocus) {
 			ScreenSizeMessage msg = new ScreenSizeMessage(imgView.getWidth(),
 					imgView.getHeight());
 			btThread.sendMessage(msg);
@@ -139,27 +137,21 @@ public class RemoteControl extends Activity implements
 
 	@Override
 	public void onGesturePerformed(GestureOverlayView overlay, Gesture gesture) {
-		if (tbtnDraw.isChecked()) {
-			float[] points = gesture.getStrokes().get(0).points;
-			btThread.sendMessage(new DrawMessage(points));
-		} else {
-			ArrayList<Prediction> predictions = mGestureLibrary
-					.recognize(gesture);
+		ArrayList<Prediction> predictions = mGestureLibrary.recognize(gesture);
 
-			// We want at least one prediction
-			if (predictions.size() > 0) {
-				Prediction prediction = predictions.get(0);
-				// We want at least some confidence in the result
-				if (prediction.score > 1.0) {
-					if ("LEFT".equals(prediction.name)) {
-						sendNext();
-					} else if ("RIGHT".equals(prediction.name)) {
-						sendPrev();
-					} else if ("UP".equals(prediction.name)) {
-						btThread.sendSimpleMessage(PPTMessage.MESSAGE_TOGGLE_BLACK_SCREEN);
-					} else if ("DOWN".equals(prediction.name)) {
-						btThread.sendSimpleMessage(PPTMessage.MESSAGE_CLEAR_DRAWING);
-					}
+		// We want at least one prediction
+		if (predictions.size() > 0) {
+			Prediction prediction = predictions.get(0);
+			// We want at least some confidence in the result
+			if (prediction.score > 1.0) {
+				if ("LEFT".equals(prediction.name)) {
+					sendNext();
+				} else if ("RIGHT".equals(prediction.name)) {
+					sendPrev();
+				} else if ("UP".equals(prediction.name)) {
+					btThread.sendSimpleMessage(PPTMessage.MESSAGE_TOGGLE_BLACK_SCREEN);
+				} else if ("DOWN".equals(prediction.name)) {
+					btThread.sendSimpleMessage(PPTMessage.MESSAGE_CLEAR_DRAWING);
 				}
 			}
 		}
@@ -167,11 +159,9 @@ public class RemoteControl extends Activity implements
 
 	private void sendPrev() {
 		btThread.sendSimpleMessage(PPTMessage.MESSAGE_PREV);
-		tbtnDraw.setChecked(false);
 	}
 
 	private void sendNext() {
 		btThread.sendSimpleMessage(PPTMessage.MESSAGE_NEXT);
-		tbtnDraw.setChecked(false);
 	}
 }
