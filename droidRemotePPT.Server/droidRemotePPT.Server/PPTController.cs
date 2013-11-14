@@ -113,5 +113,23 @@ namespace droidRemotePPT.Server
                 v.DrawLine(startX, startY, endX, endY);
             }
         }
+
+        public int CurrentSlide
+        {
+            get
+            {
+                if (!IsActive) return 0;
+                return Presentation.SlideShowWindow.View.CurrentShowPosition;
+            }
+        }
+
+        public int TotalSlides
+        {
+            get
+            {
+                if (!IsActive) return 0;
+                return Presentation.Slides.Count;
+            }
+        }
     }
 }

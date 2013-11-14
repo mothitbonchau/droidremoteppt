@@ -38,17 +38,17 @@ namespace droidRemotePPT.Server
                 if (msg is NextMessage)
                 {
                     _pptController.NextSlide();
-                    SendSlideImage();
+                    SendSlideImage(_pptController.CurrentSlide, _pptController.TotalSlides);
                 }
                 else if (msg is PrevMessage)
                 {
                     _pptController.PrevSlide();
-                    SendSlideImage();
+                    SendSlideImage(_pptController.CurrentSlide, _pptController.TotalSlides);
                 }
                 else if (msg is StartMessage)
                 {
                     _pptController.Start();
-                    SendSlideImage();
+                    SendSlideImage(_pptController.CurrentSlide, _pptController.TotalSlides);
                 }
                 else if (msg is ScreenSizeMessage)
                 {
@@ -72,7 +72,7 @@ namespace droidRemotePPT.Server
             }
         }
 
-        private void SendSlideImage()
+        private void SendSlideImage(int currentSlide, int totalSlides)
         {
             if (!ScreenSize.IsEmpty)
             {
@@ -80,7 +80,7 @@ namespace droidRemotePPT.Server
                 if (img == null) return;
 
                 var smallImg = Utils.Resize(img, ScreenSize.Width);
-                var msg = new SlideChangedMessage(smallImg);
+                var msg = new SlideChangedMessage(currentSlide, totalSlides, smallImg);
                 _btServer.SendMessage(msg);
             }
         }        

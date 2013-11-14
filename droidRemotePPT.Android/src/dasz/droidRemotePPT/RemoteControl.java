@@ -27,6 +27,7 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
+import android.widget.ProgressBar;
 
 public class RemoteControl extends Activity implements
 		OnGesturePerformedListener {
@@ -37,6 +38,7 @@ public class RemoteControl extends Activity implements
 	private GestureLibrary mGestureLibrary;
 	private ImageButton btnNext;
 	private ImageButton btnPrev;
+	private ProgressBar progressBar;
 	private BluetoothThread btThread;
 	
 	private static class MessageHandler extends Handler
@@ -54,6 +56,8 @@ public class RemoteControl extends Activity implements
 			if (outer != null && msg.getClass() == SlideChangedMessage.class) {
 				SlideChangedMessage scm = (SlideChangedMessage) msg;
 				outer.imgView.setImageBitmap(scm.getBmp());
+				outer.progressBar.setMax(scm.getTotalSlides());
+				outer.progressBar.setProgress(scm.getCurrentSlide());
 			}
 		}
 	}
@@ -82,6 +86,7 @@ public class RemoteControl extends Activity implements
 		gestView = (GestureOverlayView) findViewById(R.id.gestures);
 		btnNext = (ImageButton) findViewById(R.id.btnNext);
 		btnPrev = (ImageButton) findViewById(R.id.btnPrev);
+		progressBar = (ProgressBar)findViewById(R.id.progressBar);
 
 		gestView.addOnGesturePerformedListener(this);
 

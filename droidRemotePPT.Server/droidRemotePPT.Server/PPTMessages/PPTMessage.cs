@@ -111,15 +111,15 @@ namespace droidRemotePPT.Server.PPTMessages
         }
 
         byte[] bytes = null;
-        public SlideChangedMessage(Image img)
+        int currentSlide;
+        int totalSlides;
+        public SlideChangedMessage(int currentSlide, int totalSlides, Image img)
         {
+            this.currentSlide = currentSlide;
+            this.totalSlides = totalSlides;
+            
             using (var ms = new System.IO.MemoryStream())
             {
-                //var enc = GetCodecInfo("image/jpeg");
-                //var eps = new EncoderParameters(1);
-                //eps.Param[0] = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 8L);
-
-                //img.Save(ms, enc, eps);
                 img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
                 bytes = ms.ToArray();
                 System.Diagnostics.Debug.WriteLine("ImageSize = {0}", bytes.Length);
@@ -133,6 +133,8 @@ namespace droidRemotePPT.Server.PPTMessages
 
         public override void WriteMessage(BigEndianWriter sw)
         {
+            sw.Write(currentSlide);
+            sw.Write(totalSlides);
             sw.Write(bytes.Length);
             sw.Write(bytes);
         }

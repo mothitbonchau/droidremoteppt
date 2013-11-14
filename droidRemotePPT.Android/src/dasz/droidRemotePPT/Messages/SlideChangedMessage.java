@@ -12,10 +12,21 @@ import android.graphics.BitmapFactory;
 public class SlideChangedMessage extends PPTMessage {
 
 	Bitmap bmp;
+	int totalSlides = 0;
+	int currentSlide = 0;
 	
 	public Bitmap getBmp() {
 		return bmp;
 	}
+	
+	public int getTotalSlides() {
+		return totalSlides;
+	}
+
+	public int getCurrentSlide() {
+		return currentSlide;
+	}
+
 
 	@Override
 	public byte getMessageId() {
@@ -28,11 +39,10 @@ public class SlideChangedMessage extends PPTMessage {
 
 	@Override
 	public void read(DataInputStream sr) throws IOException {
+		currentSlide = sr.readInt();
+		totalSlides = sr.readInt();
 		@SuppressWarnings("unused")
 		int length = sr.readInt();
-		//byte[] buffer = new byte[length];
-		//sr.read(buffer);
-		//bmp = BitmapFactory.decodeByteArray(buffer, 0, length);
 		bmp = BitmapFactory.decodeStream(new FlushedInputStream(sr));
 	}
 
