@@ -1,8 +1,8 @@
 package dasz.droidRemotePPT;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
-import dasz.droidRemotePPT.Messages.DrawMessage;
 import dasz.droidRemotePPT.Messages.PPTMessage;
 import dasz.droidRemotePPT.Messages.ScreenSizeMessage;
 import dasz.droidRemotePPT.Messages.SlideChangedMessage;
@@ -26,7 +26,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ToggleButton;
 import android.widget.ImageView.ScaleType;
 
 public class RemoteControl extends Activity implements
@@ -39,19 +38,27 @@ public class RemoteControl extends Activity implements
 	private ImageButton btnNext;
 	private ImageButton btnPrev;
 	private BluetoothThread btThread;
-
-	final Handler mMessageHandler = new Handler() {
+	
+	private static class MessageHandler extends Handler
+	{
+		private final WeakReference<RemoteControl> mTarget;
+		public MessageHandler(RemoteControl target) {
+			mTarget = new WeakReference<RemoteControl>(target);
+		}
 		@Override
 		public void handleMessage(Message arg) {
 			super.handleMessage(arg);
 
 			PPTMessage msg = (PPTMessage) arg.obj;
-			if (msg.getClass() == SlideChangedMessage.class) {
+			final RemoteControl outer = mTarget.get();
+			if (outer != null && msg.getClass() == SlideChangedMessage.class) {
 				SlideChangedMessage scm = (SlideChangedMessage) msg;
-				imgView.setImageBitmap(scm.getBmp());
+				outer.imgView.setImageBitmap(scm.getBmp());
 			}
 		}
-	};
+	}
+
+	final Handler mMessageHandler = new MessageHandler(this);
 
 	/** Called when the activity is first created. */
 	@Override
