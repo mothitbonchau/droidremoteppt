@@ -33,6 +33,24 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
+        "OwnerKey" = "8:_40A1CE7F5E7ABCA531E73ACDDC4A3240"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
+        "OwnerKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
+        "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -75,24 +93,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_AC5F526C618FCD1DCB550CE16B8ECF25"
-        "OwnerKey" = "8:_40A1CE7F5E7ABCA531E73ACDDC4A3240"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_AC5F526C618FCD1DCB550CE16B8ECF25"
-        "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_AC5F526C618FCD1DCB550CE16B8ECF25"
-        "OwnerKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_C26B60D25130619E2832B99BE34CF125"
         "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
         "MsmSig" = "8:_UNDEFINED"
@@ -100,37 +100,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AC5F526C618FCD1DCB550CE16B8ECF25"
+        "OwnerKey" = "8:_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_93F8DA6621194555884A9E545612251C"
+        "OwnerKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3D511F1EBD0D4C1D7AE295D8B9C60673"
+        "OwnerKey" = "8:_40A1CE7F5E7ABCA531E73ACDDC4A3240"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_910DCFAE37913DFC812BF0C50B710771"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C26B60D25130619E2832B99BE34CF125"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_27EBC3A667D8795292D2BBDFEF58CF67"
+        "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -142,19 +130,31 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
+        "OwnerKey" = "8:_27EBC3A667D8795292D2BBDFEF58CF67"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
+        "OwnerKey" = "8:_C26B60D25130619E2832B99BE34CF125"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_40A1CE7F5E7ABCA531E73ACDDC4A3240"
+        "OwnerKey" = "8:_910DCFAE37913DFC812BF0C50B710771"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3D511F1EBD0D4C1D7AE295D8B9C60673"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_93F8DA6621194555884A9E545612251C"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -274,8 +274,44 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_27EBC3A667D8795292D2BBDFEF58CF67"
+                    {
+                    "Name" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:InTheHand.Net.Personal, Version=3.0.2.0, Culture=neutral, PublicKeyToken=ea38caa273134499, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
+                    {
+                    "Name" = "8:InTheHand.Net.Personal.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:InTheHand.Net.Personal.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
@@ -300,6 +336,11 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_3D511F1EBD0D4C1D7AE295D8B9C60673"
+                    {
+                    "Name" = "8:Microsoft.Office.Tools.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.dll"
             "TargetName" = "8:"
@@ -326,6 +367,11 @@
             "AssemblyAsmDisplayName" = "8:droidRemotePPT.Server, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
+                    "_40A1CE7F5E7ABCA531E73ACDDC4A3240"
+                    {
+                    "Name" = "8:droidRemotePPT.Server.exe"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:droidRemotePPT.Server.exe"
             "TargetName" = "8:"
@@ -352,6 +398,11 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_86D782C28B3778208B9CA91C2082DF5C"
+                    {
+                    "Name" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
             "TargetName" = "8:"
@@ -378,6 +429,11 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_910DCFAE37913DFC812BF0C50B710771"
+                    {
+                    "Name" = "8:Microsoft.Office.Tools.Common.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Common.dll"
             "TargetName" = "8:"
@@ -404,34 +460,13 @@
             "AssemblyAsmDisplayName" = "8:stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_93F8DA6621194555884A9E545612251C"
+                    {
+                    "Name" = "8:stdole.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:stdole.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AC5F526C618FCD1DCB550CE16B8ECF25"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:InTheHand.Net.Personal, Version=3.0.2.0, Culture=neutral, PublicKeyToken=ea38caa273134499, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:InTheHand.Net.Personal.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
@@ -456,6 +491,11 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_C26B60D25130619E2832B99BE34CF125"
+                    {
+                    "Name" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
             "TargetName" = "8:"
@@ -531,15 +571,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Droid Remote PPT"
-        "ProductCode" = "8:{F870382B-CCA8-489D-B3A5-F604BAF24E50}"
-        "PackageCode" = "8:{BAE41DF6-F330-4ECC-BE13-270F2B12C953}"
+        "ProductCode" = "8:{3A6C199B-DE8C-40BE-84E2-4638F0E85228}"
+        "PackageCode" = "8:{61FA6741-FC0E-4D4D-A166-749D4251C5BD}"
         "UpgradeCode" = "8:{10400565-3F8E-47AF-BD98-5326361602B8}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.1.0"
         "Manufacturer" = "8:zaczek.net"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
