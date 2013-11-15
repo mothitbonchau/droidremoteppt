@@ -35,9 +35,8 @@ public class BluetoothThread extends Thread {
 
 		mmInStream = tmpIn;
 		mmOutStream = tmpOut;
-
 	}
-	
+
 	public void stopThread() {
 		try {
 			socket.close();
@@ -69,11 +68,10 @@ public class BluetoothThread extends Thread {
 		while (true) {
 			try {
 				// Read from the InputStream
-				//byte[] buffer = new byte[1];
-				//if(mmInStream.read(buffer) == 0) break;
-				//byte msgID = buffer[0];
 				byte msgID = mmInStream.readByte();
-				if(msgID == 0) continue;
+				if (msgID <= 0
+						|| msgID >= PPTMessage.FIRST_INVALID_MESSAGE_NUMBER)
+					continue;
 				PPTMessage msg;
 				switch (msgID) {
 				case PPTMessage.MESSAGE_SLIDE_CHANGED:
@@ -85,6 +83,7 @@ public class BluetoothThread extends Thread {
 				}
 
 				msg.read(mmInStream);
+				if(msg.isValid() == false) continue;
 				// Send the obtained bytes to the UI Activity
 				mHandler.obtainMessage(1, msg).sendToTarget();
 			} catch (IOException e) {

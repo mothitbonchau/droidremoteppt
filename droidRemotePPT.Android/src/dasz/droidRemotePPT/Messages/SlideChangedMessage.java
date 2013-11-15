@@ -2,23 +2,22 @@ package dasz.droidRemotePPT.Messages;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.FilterInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 
 public class SlideChangedMessage extends PPTMessage {
 
 	Bitmap bmp;
 	int totalSlides = 0;
 	int currentSlide = 0;
-	
+
 	public Bitmap getBmp() {
 		return bmp;
 	}
-	
+
 	public int getTotalSlides() {
 		return totalSlides;
 	}
@@ -26,7 +25,6 @@ public class SlideChangedMessage extends PPTMessage {
 	public int getCurrentSlide() {
 		return currentSlide;
 	}
-
 
 	@Override
 	public byte getMessageId() {
@@ -39,35 +37,25 @@ public class SlideChangedMessage extends PPTMessage {
 
 	@Override
 	public void read(DataInputStream sr) throws IOException {
+		isValid = false;
 		currentSlide = sr.readInt();
 		totalSlides = sr.readInt();
-		@SuppressWarnings("unused")
-		int length = sr.readInt();
-		bmp = BitmapFactory.decodeStream(new FlushedInputStream(sr));
-	}
+		final int length = sr.readInt();
 
-	// http://code.google.com/p/android/issues/detail?id=6066
-	static class FlushedInputStream extends FilterInputStream {
-	    public FlushedInputStream(InputStream inputStream) {
-	        super(inputStream);
-	    }
-
-	    @Override
-	    public long skip(long n) throws IOException {
-	        long totalBytesSkipped = 0L;
-	        while (totalBytesSkipped < n) {
-	            long bytesSkipped = in.skip(n - totalBytesSkipped);
-	            if (bytesSkipped == 0L) {
-	                  int b = read();
-	                  if (b < 0) {
-	                      break;  // we reached EOF
-	                  } else {
-	                      bytesSkipped = 1; // we read one byte
-	                  }
-	           }
-	            totalBytesSkipped += bytesSkipped;
-	        }
-	        return totalBytesSkipped;
-	    }
+		if (currentSlide < 0 || currentSlide > 100000 || totalSlides < 0
+				|| totalSlides > 100000 || length < 0 || length > 100000) {
+			Log.e("drPTT", "Invalid slide changed message received");
+			return;
+		} else {
+			isValid = true;
+		}
+		if (length > 0) {
+			byte[] buffer = new byte[length];
+			int bytesRead = 0;
+			while(bytesRead < length) {
+				bytesRead += sr.read(buffer, bytesRead, length - bytesRead);
+			}
+			bmp = BitmapFactory.decodeByteArray(buffer, 0, length);
+		}
 	}
 }

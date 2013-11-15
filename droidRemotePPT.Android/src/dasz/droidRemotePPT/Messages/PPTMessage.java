@@ -14,9 +14,16 @@ public abstract class PPTMessage {
 	public static final int MESSAGE_SLIDE_CHANGED = 7;
 	public static final int MESSAGE_START = 8;
 	public static final int MESSAGE_DRAW = 9;
+	public static final int FIRST_INVALID_MESSAGE_NUMBER = 10;
 
 	public abstract byte getMessageId();
 
 	public abstract void read(DataInputStream sr) throws IOException;
 	public abstract void write(DataOutputStream sw) throws IOException;
+	
+	protected boolean isValid = true;
+
+	public boolean isValid() {
+		return isValid;
+	}
 }

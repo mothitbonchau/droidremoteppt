@@ -117,12 +117,22 @@ namespace droidRemotePPT.Server.PPTMessages
         {
             this.currentSlide = currentSlide;
             this.totalSlides = totalSlides;
-            
-            using (var ms = new System.IO.MemoryStream())
+
+            if (img != null)
             {
-                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                bytes = ms.ToArray();
-                System.Diagnostics.Debug.WriteLine("ImageSize = {0}", bytes.Length);
+                using (var ms = new System.IO.MemoryStream())
+                {
+                    using (var bmp = new Bitmap(img))
+                    {
+                        bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        bytes = ms.ToArray();
+                        System.Diagnostics.Debug.WriteLine("ImageSize = {0}", bytes.Length);
+                    }
+                }
+            }
+            else
+            {
+                bytes = new byte[] { };
             }
         }
 
