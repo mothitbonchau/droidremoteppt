@@ -5,7 +5,7 @@
     android:versionName="1.1" >
 
     <uses-sdk
-        android:minSdkVersion="5"
+        android:minSdkVersion="7"
         android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -19,7 +19,8 @@
         android:label="@string/app_name" >
         <activity
             android:name="net.zaczek.droidRemotePPT.Main"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,13 +29,17 @@
         </activity>
         <activity
             android:name="net.zaczek.droidRemotePPT.RemoteControl"
-            android:label="Remote Control"
+            android:label="@string/remote_control"
             android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="dasz.droidRemotePPT.CONTROL" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="net.zaczek.droidRemotePPT.About"
+            android:label="@string/about" >
         </activity>
         <activity
             android:name="org.acra.CrashReportDialog"

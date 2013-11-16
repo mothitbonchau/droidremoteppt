@@ -9,11 +9,7 @@
 	android:paddingTop="10dp">
 	<TextView android:layout_width="fill_parent"
 		android:layout_height="wrap_content" 
-		android:text="Android PPT Remote Controller"
-		android:textSize="10pt" />
-	<TextView android:layout_width="fill_parent"
-		android:layout_height="wrap_content" 
-		android:text="Tab on a device to connect and start" 
+		android:text="@string/main_hint" 
 		android:layout_marginTop="10dp"/>
 	<ListView android:id="@+id/lstDevices" 
 	    android:layout_width="fill_parent"

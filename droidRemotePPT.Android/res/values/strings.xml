@@ -2,7 +2,9 @@
 <resources>
     <string name="hello">Hello World, Main!</string>
     <string name="app_name">droid Remote PPT</string>
-
+    <string name="app_title">Android PPT Remote Controller</string>
+    <string name="main_hint">Tab on a device to connect and start</string>
+    
 	<string name="crash_toast_text">Ooooops ! I crashed, but a report has been sent to my developer to help fix the issue !</string>
 	<string name="crash_notif_ticker_text">Unexpected error, please send a report...</string>
 	<string name="crash_notif_title">CrashTest has crashed...</string>
@@ -13,4 +15,7 @@
 		all you have to do is click OK.</string>
 	<string name="crash_dialog_comment_prompt">You might add your comments about the problem below:</string>
 	<string name="crash_dialog_ok_toast">Thank you !</string>
+	<string name="about">About</string>
+	<string name="exit">Exit</string>
+	<string name="remote_control">Remote control</string>
 </resources>

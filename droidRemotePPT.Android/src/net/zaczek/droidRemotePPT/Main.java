@@ -5,14 +5,16 @@ import java.util.List;
 import java.util.Set;
 
 import net.zaczek.droidRemotePPT.R;
-import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -21,7 +23,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class Main extends Activity {
+public class Main extends ActionBarActivity {
 	private BluetoothAdapter mBluetoothAdapter;
 	private List<DeviceListViewItem> lstDevices;
 	private static ConnectThread connectThread;
@@ -42,8 +44,8 @@ public class Main extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.main);
+		setTitle(R.string.app_title);
 		
 		mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 		if (mBluetoothAdapter == null) {
@@ -116,4 +118,26 @@ public class Main extends Activity {
 		if(connectThread == null) return null;
 		return connectThread.getSocket();
 	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		int itemId = item.getItemId();
+		switch (itemId) {
+		case R.id.action_about:
+			startActivity(new Intent(this, About.class));
+			return true;
+		case R.id.action_exit:
+			finish();
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
 }
