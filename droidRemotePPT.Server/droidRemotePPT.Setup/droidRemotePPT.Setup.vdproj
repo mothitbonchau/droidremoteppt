@@ -34,13 +34,7 @@
         "Entry"
         {
         "MsmKey" = "8:_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
-        "OwnerKey" = "8:_40A1CE7F5E7ABCA531E73ACDDC4A3240"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
-        "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
+        "OwnerKey" = "8:_CFC22E4329B620956D961D70DA415347"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -51,7 +45,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
+        "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_33853CAAF9E046B58E9E4BBBFA126105"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -69,7 +75,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_40A1CE7F5E7ABCA531E73ACDDC4A3240"
+        "MsmKey" = "8:_7F50A22856D5E9656A5E232270D1A5A4"
+        "OwnerKey" = "8:_CFC22E4329B620956D961D70DA415347"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7F50A22856D5E9656A5E232270D1A5A4"
+        "OwnerKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7F50A22856D5E9656A5E232270D1A5A4"
         "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -93,8 +111,32 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_999E42143C594931B2318AF3F12BD252"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C26B60D25130619E2832B99BE34CF125"
         "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CFC22E4329B620956D961D70DA415347"
+        "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7F50A22856D5E9656A5E232270D1A5A4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -106,37 +148,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_93F8DA6621194555884A9E545612251C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3D511F1EBD0D4C1D7AE295D8B9C60673"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_910DCFAE37913DFC812BF0C50B710771"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C26B60D25130619E2832B99BE34CF125"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_27EBC3A667D8795292D2BBDFEF58CF67"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_86D782C28B3778208B9CA91C2082DF5C"
+        "OwnerKey" = "8:_CFC22E4329B620956D961D70DA415347"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -148,13 +160,37 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_40A1CE7F5E7ABCA531E73ACDDC4A3240"
+        "OwnerKey" = "8:_86D782C28B3778208B9CA91C2082DF5C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
+        "OwnerKey" = "8:_27EBC3A667D8795292D2BBDFEF58CF67"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C26B60D25130619E2832B99BE34CF125"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_910DCFAE37913DFC812BF0C50B710771"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3D511F1EBD0D4C1D7AE295D8B9C60673"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_93F8DA6621194555884A9E545612251C"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -274,6 +310,11 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_27EBC3A667D8795292D2BBDFEF58CF67"
+                    {
+                    "Name" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
             "TargetName" = "8:"
@@ -300,6 +341,11 @@
             "AssemblyAsmDisplayName" = "8:InTheHand.Net.Personal, Version=3.0.2.0, Culture=neutral, PublicKeyToken=ea38caa273134499, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
+                    {
+                    "Name" = "8:InTheHand.Net.Personal.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:InTheHand.Net.Personal.dll"
             "TargetName" = "8:"
@@ -319,6 +365,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_33853CAAF9E046B58E9E4BBBFA126105"
+            {
+            "SourcePath" = "8:..\\droidRemotePPT.PowerPointAddIn\\bin\\Release\\droidRemotePPT.PowerPointAddIn.vsto"
+            "TargetName" = "8:droidRemotePPT.PowerPointAddIn.vsto"
+            "Tag" = "8:"
+            "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3D511F1EBD0D4C1D7AE295D8B9C60673"
             {
             "AssemblyRegister" = "3:1"
@@ -326,6 +392,11 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_3D511F1EBD0D4C1D7AE295D8B9C60673"
+                    {
+                    "Name" = "8:Microsoft.Office.Tools.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.dll"
             "TargetName" = "8:"
@@ -345,15 +416,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_40A1CE7F5E7ABCA531E73ACDDC4A3240"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7F50A22856D5E9656A5E232270D1A5A4"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:droidRemotePPT.Server, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:log4net, Version=1.2.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_7F50A22856D5E9656A5E232270D1A5A4"
+                    {
+                    "Name" = "8:log4net.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
-            "SourcePath" = "8:droidRemotePPT.Server.exe"
+            "SourcePath" = "8:log4net.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
@@ -367,7 +443,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:TRUE"
+            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -378,6 +454,11 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_86D782C28B3778208B9CA91C2082DF5C"
+                    {
+                    "Name" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
             "TargetName" = "8:"
@@ -404,6 +485,11 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_910DCFAE37913DFC812BF0C50B710771"
+                    {
+                    "Name" = "8:Microsoft.Office.Tools.Common.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Common.dll"
             "TargetName" = "8:"
@@ -430,6 +516,11 @@
             "AssemblyAsmDisplayName" = "8:stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_93F8DA6621194555884A9E545612251C"
+                    {
+                    "Name" = "8:stdole.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:stdole.dll"
             "TargetName" = "8:"
@@ -449,6 +540,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_999E42143C594931B2318AF3F12BD252"
+            {
+            "SourcePath" = "8:..\\droidRemotePPT.PowerPointAddIn\\bin\\Release\\droidRemotePPT.PowerPointAddIn.dll.manifest"
+            "TargetName" = "8:droidRemotePPT.PowerPointAddIn.dll.manifest"
+            "Tag" = "8:"
+            "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C26B60D25130619E2832B99BE34CF125"
             {
             "AssemblyRegister" = "3:1"
@@ -456,8 +567,44 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_C26B60D25130619E2832B99BE34CF125"
+                    {
+                    "Name" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CFC22E4329B620956D961D70DA415347"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:droidRemotePPT.Server, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_CFC22E4329B620956D961D70DA415347"
+                    {
+                    "Name" = "8:droidRemotePPT.Server.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:droidRemotePPT.Server.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
@@ -532,7 +679,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Droid Remote PPT"
         "ProductCode" = "8:{0C2BBAF5-69C3-490F-A7C6-E141FDEE04BD}"
-        "PackageCode" = "8:{9528A7CC-0465-4A85-93C9-7EB16D4ACA27}"
+        "PackageCode" = "8:{F148DA05-950E-44A8-8541-3FE66149CC75}"
         "UpgradeCode" = "8:{10400565-3F8E-47AF-BD98-5326361602B8}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -607,6 +754,108 @@
                     "Transitive" = "11:FALSE"
                         "Keys"
                         {
+                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_AF28A9481C3D477D90BCB7770F8DC2B6"
+                            {
+                            "Name" = "8:Microsoft"
+                            "Condition" = "8:"
+                            "AlwaysCreate" = "11:FALSE"
+                            "DeleteAtUninstall" = "11:FALSE"
+                            "Transitive" = "11:FALSE"
+                                "Keys"
+                                {
+                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_1F90DE7259DF49BF9E45A205B2B5454A"
+                                    {
+                                    "Name" = "8:Office"
+                                    "Condition" = "8:"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "DeleteAtUninstall" = "11:FALSE"
+                                    "Transitive" = "11:FALSE"
+                                        "Keys"
+                                        {
+                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_B2660C64AF9445B3B9A9B00E680590D8"
+                                            {
+                                            "Name" = "8:PowerPoint"
+                                            "Condition" = "8:"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "DeleteAtUninstall" = "11:FALSE"
+                                            "Transitive" = "11:FALSE"
+                                                "Keys"
+                                                {
+                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_3F84B2B0325F4BD688D99D665FBFFCD8"
+                                                    {
+                                                    "Name" = "8:Addins"
+                                                    "Condition" = "8:"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "DeleteAtUninstall" = "11:FALSE"
+                                                    "Transitive" = "11:FALSE"
+                                                        "Keys"
+                                                        {
+                                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_09F3063C70614F83B8A42D5D4597F979"
+                                                            {
+                                                            "Name" = "8:droidRemotePPT.PowerPointAddIn"
+                                                            "Condition" = "8:"
+                                                            "AlwaysCreate" = "11:FALSE"
+                                                            "DeleteAtUninstall" = "11:FALSE"
+                                                            "Transitive" = "11:FALSE"
+                                                                "Keys"
+                                                                {
+                                                                }
+                                                                "Values"
+                                                                {
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_24E14ECCBD9B4517A035B8BBE11DCFC5"
+                                                                    {
+                                                                    "Name" = "8:LoadBehavior"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:3"
+                                                                    "Value" = "3:3"
+                                                                    }
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_332AF8D4449C419993342E66D968DB59"
+                                                                    {
+                                                                    "Name" = "8:Description"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:1"
+                                                                    "Value" = "8:droid Remote PowerPoint AddIn"
+                                                                    }
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_38227A4AB8184BAB97F3F1EC4401E8EC"
+                                                                    {
+                                                                    "Name" = "8:FriendlyName"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:1"
+                                                                    "Value" = "8:droid Remote PowerPoint AddIn"
+                                                                    }
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_E9EC1C1D89514E3C834ACCF4F2F7D6B9"
+                                                                    {
+                                                                    "Name" = "8:Manifest"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:1"
+                                                                    "Value" = "8:file:///[TARGETDIR]droidRemotePPT.PowerPointAddIn.vsto|vstolocal"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        "Values"
+                                                        {
+                                                        }
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
+                                }
+                                "Values"
+                                {
+                                }
+                            }
                             "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_D2410F72CAAC49DAB82B4668ED35B46F"
                             {
                             "Name" = "8:[Manufacturer]"
