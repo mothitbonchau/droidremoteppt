@@ -89,7 +89,7 @@ namespace droidRemotePPT.PowerPointAddIn
 
         void statusButton_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
         {
-            // do nothing
+            OnStatusButtonClick();
         }
         #endregion
 
@@ -97,9 +97,15 @@ namespace droidRemotePPT.PowerPointAddIn
         protected override Microsoft.Office.Core.IRibbonExtensibility CreateRibbonExtensibilityObject()
         {
             ribbon = new Ribbon1(this);
+            ribbon.btnStatus.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(btnStatus_Click);
             var ribbons = new Microsoft.Office.Tools.Ribbon.IRibbonExtension[] { ribbon };
             ribbonMgr = Globals.Factory.GetRibbonFactory().CreateRibbonManager(ribbons);
             return ribbonMgr;
+        }
+
+        void btnStatus_Click(object sender, Microsoft.Office.Tools.Ribbon.RibbonControlEventArgs e)
+        {
+            OnStatusButtonClick();
         }
         #endregion
 
@@ -140,6 +146,12 @@ namespace droidRemotePPT.PowerPointAddIn
                     }
                 }
             }
+        }
+
+        private void OnStatusButtonClick()
+        {
+            var frm = new LoggingMessagesForm(Logging.GetMessages());
+            frm.Show();
         }
 
         private void SetStatusButtonText(string text)

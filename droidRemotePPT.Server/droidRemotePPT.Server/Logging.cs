@@ -6,6 +6,7 @@ using log4net.Config;
 using log4net.Core;
 using log4net.Layout;
 using log4net.Appender;
+using System.Windows.Forms;
 
 namespace droidRemotePPT.Server
 {
@@ -22,7 +23,23 @@ namespace droidRemotePPT.Server
             Root = log4net.LogManager.GetLogger("Root");
         }
 
-        public static void Configure()
+        public static string GetMessages()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (var ev in MemAppender.GetEvents())
+            {
+                sb.AppendFormat("{0} {1}", ev.Level, ev.RenderedMessage);
+                sb.AppendLine();
+                if (ev.ExceptionObject != null)
+                {
+                    sb.AppendLine(ev.ExceptionObject.ToString());
+                }
+            }
+
+            return sb.ToString();
+        }
+
+        private static void Configure()
         {
             var hierarchy = (log4net.Repository.Hierarchy.Hierarchy)log4net.LogManager.GetRepository();
             var patternLayout = new PatternLayout();
