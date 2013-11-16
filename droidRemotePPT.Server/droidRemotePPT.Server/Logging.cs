@@ -5,6 +5,7 @@ using System.Text;
 using log4net.Config;
 using log4net.Core;
 using log4net.Layout;
+using log4net.Appender;
 
 namespace droidRemotePPT.Server
 {
@@ -28,13 +29,13 @@ namespace droidRemotePPT.Server
             patternLayout.ConversionPattern = LOG_PATTERN;
             patternLayout.ActivateOptions();
 
-            MemAppender = new log4net.Appender.MemoryAppender();
+            MemAppender = new LimitedMemoryAppender();
             MemAppender.Name = "MemoryAppender";
             MemAppender.Layout = patternLayout;
             MemAppender.ActivateOptions();
             hierarchy.Root.AddAppender(MemAppender);
 
-            var traceAppender = new log4net.Appender.TraceAppender();
+            var traceAppender = new TraceAppender();
             traceAppender.Name = "TraceAppender";
             traceAppender.Layout = patternLayout;
             traceAppender.ActivateOptions();
@@ -43,5 +44,18 @@ namespace droidRemotePPT.Server
             hierarchy.Root.Level = Level.All;
             hierarchy.Configured = true;
         }
+
+        public class LimitedMemoryAppender : MemoryAppender
+        {
+            override protected void Append(LoggingEvent loggingEvent)
+            {
+                base.Append(loggingEvent);
+                if (m_eventsList.Count > 1000)
+                {
+                    m_eventsList.RemoveAt(0);
+                }
+            }
+        }
+
     }
 }
