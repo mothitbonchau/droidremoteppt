@@ -105,6 +105,8 @@ namespace droidRemotePPT.PowerPointAddIn
 
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
+            Logging.Root.Info("Starting AddIn");
+
             // Create Toolbar
             CreateToolbar();
 

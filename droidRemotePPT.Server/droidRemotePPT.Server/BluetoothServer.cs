@@ -91,14 +91,16 @@ namespace droidRemotePPT.Server
 
         public void StartBluetooth()
         {
+            Logging.Root.Info("Starting BluetoothListener");
             Listening = true;
             try
             {
                 bl = new BluetoothListener(ServiceGUID);
                 bl.Start();
             }
-            catch
+            catch(Exception ex)
             {
+                Logging.Root.Error("Error Starting BluetoothListener", ex);
                 NotSupported = true;
                 return;
             }
@@ -109,6 +111,7 @@ namespace droidRemotePPT.Server
 
         public void StopBluetooth()
         {
+            Logging.Root.Info("Stopping BluetoothListener");
             if (bl != null)
             {
                 Listening = false;
@@ -136,9 +139,11 @@ namespace droidRemotePPT.Server
                 }
                 catch (Exception ex)
                 {
+                    Logging.Root.Debug("Error connecting client", ex);
                     System.Diagnostics.Debug.WriteLine(ex.ToString());
                     break;
                 }
+                Logging.Root.Info("Client connected");
                 ClientConnected = true;
 
                 //keep connection open
