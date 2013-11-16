@@ -128,7 +128,14 @@ namespace droidRemotePPT.PowerPointAddIn
             {
                 if (statusButton != null)
                 {
-                    SetStatusButtonText(server.ClientConnected ? "Client connected" : "Client not connected");
+                    if (server.NotSupported)
+                    {
+                        SetStatusButtonText("Not supported");
+                    }
+                    else
+                    {
+                        SetStatusButtonText(server.ClientConnected ? "Client connected" : "Client not connected");
+                    }
                 }
             }
         }
