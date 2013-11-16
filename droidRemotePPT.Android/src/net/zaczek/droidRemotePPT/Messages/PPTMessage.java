@@ -1,4 +1,4 @@
-package dasz.droidRemotePPT.Messages;
+package net.zaczek.droidRemotePPT.Messages;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

@@ -1,12 +1,13 @@
-package dasz.droidRemotePPT;
+package net.zaczek.droidRemotePPT;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-import dasz.droidRemotePPT.Messages.PPTMessage;
-import dasz.droidRemotePPT.Messages.SimpleMessage;
-import dasz.droidRemotePPT.Messages.SlideChangedMessage;
+import net.zaczek.droidRemotePPT.Messages.PPTMessage;
+import net.zaczek.droidRemotePPT.Messages.SimpleMessage;
+import net.zaczek.droidRemotePPT.Messages.SlideChangedMessage;
+
 
 import android.bluetooth.BluetoothSocket;
 import android.os.Handler;

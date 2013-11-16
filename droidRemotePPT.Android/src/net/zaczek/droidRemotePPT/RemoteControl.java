@@ -1,11 +1,13 @@
-package dasz.droidRemotePPT;
+package net.zaczek.droidRemotePPT;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
-import dasz.droidRemotePPT.Messages.PPTMessage;
-import dasz.droidRemotePPT.Messages.ScreenSizeMessage;
-import dasz.droidRemotePPT.Messages.SlideChangedMessage;
+import net.zaczek.droidRemotePPT.Messages.PPTMessage;
+import net.zaczek.droidRemotePPT.Messages.ScreenSizeMessage;
+import net.zaczek.droidRemotePPT.Messages.SlideChangedMessage;
+
+import net.zaczek.droidRemotePPT.R;
 
 import android.app.Activity;
 import android.gesture.Gesture;
@@ -81,7 +83,7 @@ public class RemoteControl extends Activity implements
 			Log.e("drPPT", "Unable to load gestures");
 			finish();
 		}
-
+		
 		imgView = (ImageView) findViewById(R.id.imgPPT);
 		gestView = (GestureOverlayView) findViewById(R.id.gestures);
 		btnNext = (ImageButton) findViewById(R.id.btnNext);

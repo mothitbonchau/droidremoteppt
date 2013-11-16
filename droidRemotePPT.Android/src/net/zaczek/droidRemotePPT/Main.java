@@ -1,8 +1,10 @@
-package dasz.droidRemotePPT;
+package net.zaczek.droidRemotePPT;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+
+import net.zaczek.droidRemotePPT.R;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -57,7 +59,7 @@ public class Main extends Activity {
 	}
 
 	protected void onConnectedToServer() {
-		startActivity(new Intent(dasz.droidRemotePPT.RemoteControl.CONTROL_ACTION));
+		startActivity(new Intent(net.zaczek.droidRemotePPT.RemoteControl.CONTROL_ACTION));
 	}
 
 	private class DeviceListViewItem {

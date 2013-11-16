@@ -1,4 +1,4 @@
-package dasz.droidRemotePPT;
+package net.zaczek.droidRemotePPT;
 
 import java.io.IOException;
 import java.util.UUID;
