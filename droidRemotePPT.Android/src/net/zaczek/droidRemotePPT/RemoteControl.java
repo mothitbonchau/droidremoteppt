@@ -130,11 +130,6 @@ public class RemoteControl extends Activity implements
 	@Override
 	protected void onResume() {
 		super.onResume();
-
-		Bitmap bmp = BitmapFactory.decodeResource(getResources(),
-				R.drawable.icon);
-		imgView.setScaleType(ScaleType.FIT_XY);
-		imgView.setImageBitmap(bmp);
 	}
 
 	@Override
