@@ -111,7 +111,7 @@ namespace droidRemotePPT.PowerPointAddIn
 
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
-            Logging.Root.Info("Starting AddIn");
+            Logging.Root.InfoFormat("Starting AddIn, Version = {0}", typeof(ThisAddIn).Assembly.GetName().Version.ToString());
 
             // Create Toolbar
             CreateToolbar();
@@ -150,7 +150,7 @@ namespace droidRemotePPT.PowerPointAddIn
 
         private void OnStatusButtonClick()
         {
-            var frm = new LoggingMessagesForm(Logging.GetMessages());
+            var frm = new InformationForm(Logging.GetMessages());
             frm.Show();
         }
 

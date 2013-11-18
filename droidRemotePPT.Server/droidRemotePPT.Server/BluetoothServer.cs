@@ -24,6 +24,7 @@ namespace droidRemotePPT.Server
 
         protected void OnMessageReceived(PPTMessage msg)
         {
+            Logging.Root.InfoFormat("{0} message received", msg.GetType().Name);
             MessageReceivedEventHandler temp = MessageReceived;
             if (temp != null)
             {
@@ -100,7 +101,7 @@ namespace droidRemotePPT.Server
             }
             catch(Exception ex)
             {
-                Logging.Root.Error("Error Starting BluetoothListener", ex);
+                Logging.Root.Error("Error starting BluetoothListener", ex);
                 NotSupported = true;
                 return;
             }
@@ -112,12 +113,18 @@ namespace droidRemotePPT.Server
         public void StopBluetooth()
         {
             Logging.Root.Info("Stopping BluetoothListener");
-            if (bl != null)
+            try
             {
-                Listening = false;
-                ClientConnected = false;
-                bl.Stop();
-                //thread.Abort();
+                if (bl != null)
+                {
+                    Listening = false;
+                    ClientConnected = false;
+                    bl.Stop();
+                }
+            }
+            catch (Exception ex)
+            {
+                Logging.Root.Error("Error stopping BluetoothListener", ex);
             }
         }
 
@@ -128,58 +135,72 @@ namespace droidRemotePPT.Server
         {
             while (Listening)
             {
-                BluetoothClient bc;
-                ClientConnected = false;
+                BluetoothClient bc = null;
                 try
                 {
-                    bc = bl.AcceptBluetoothClient();
-                    var s = bc.GetStream();
-                    sr = new BigEndianReader(new System.IO.BinaryReader(s));
-                    sw = new BigEndianWriter(new System.IO.BinaryWriter(s));
-                }
-                catch (Exception ex)
-                {
-                    Logging.Root.Debug("Error connecting client", ex);
-                    System.Diagnostics.Debug.WriteLine(ex.ToString());
-                    break;
-                }
-                Logging.Root.Info("Client connected");
-                ClientConnected = true;
-
-                //keep connection open
-                while (Listening)
-                {
-                    byte msgID;
+                    ClientConnected = false;
                     try
                     {
-                        msgID = sr.ReadByte();
+                        bc = bl.AcceptBluetoothClient();
+                        var s = bc.GetStream();
+                        sr = new BigEndianReader(new System.IO.BinaryReader(s));
+                        sw = new BigEndianWriter(new System.IO.BinaryWriter(s));
+                    }
+                    catch (Exception ex)
+                    {
+                        Logging.Root.Debug("Error connecting client", ex);
+                        break;
+                    }
+                    Logging.Root.Info("Client connected");
+                    ClientConnected = true;
+
+                    //keep connection open
+                    while (Listening)
+                    {
+                        byte msgID;
+                        try
+                        {
+                            msgID = sr.ReadByte();
+                        }
+                        catch
+                        {
+                            //connection lost
+                            Logging.Root.Info("Connection lost");
+                            break;
+                        }
+
+                        try
+                        {
+                            PPTMessage msg = PPTMessage.CreateMessage((PPTMessage.MessageKind)msgID);
+                            msg.ReadMessage(sr);
+                            OnMessageReceived(msg);
+                        }
+                        catch (Exception ex)
+                        {
+                            Logging.Root.Error("Error while processing messages", ex);
+                            break;
+                        }
+                    }
+                }
+                finally
+                {
+                    try
+                    {
+                        if(bc != null) bc.Close();
                     }
                     catch
                     {
-                        //connection lost
-                        break;
+                        // Dont care
                     }
-
-
-                    PPTMessage msg = PPTMessage.CreateMessage((PPTMessage.MessageKind)msgID);
-                    msg.ReadMessage(sr);
-                    OnMessageReceived(msg);
                 }
-
-                try
-                {
-                    bc.Close();
-                }
-                catch
-                {
-                    // Dont care
-                }
-            }
-
+            } // while (Listening)
         }
 
         public void SendMessage(PPTMessage msg)
         {
+            if (msg == null) return;
+
+            Logging.Root.InfoFormat("Sending {0} message", msg.GetType().Name);
             sw.Write((byte)msg.Kind);
             msg.WriteMessage(sw);
         }
