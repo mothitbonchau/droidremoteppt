@@ -13,6 +13,7 @@
 		    android:layout_height="fill_parent" 
 		    android:id="@+id/imgPPT"
 		    android:scaleType="fitCenter"
+		    android:contentDescription="@string/img_slide_description"
 			android:layout_width="fill_parent"></ImageView>
 	</android.gesture.GestureOverlayView>
 		<RelativeLayout
@@ -28,23 +29,27 @@
 
 		    <ImageButton		        
 		        android:id="@+id/btnNext"
-		        android:layout_width="wrap_content"
-		        android:layout_height="50dp"
 		        android:layout_alignParentRight="true"
+		        android:layout_width="60dp"
+		        android:layout_height="50dp"
+				android:scaleType="fitCenter"		        
+		        android:contentDescription="@string/img_forward_description"
 		        android:src="@drawable/ic_menu_forward" />
 
 		    <ImageButton
 		        android:id="@+id/btnPrev"
-		        android:layout_width="wrap_content"
 		        android:layout_alignParentLeft="true"
+		        android:layout_width="60dp"
 		        android:layout_height="50dp"
+		        android:scaleType="fitCenter"		        
+		        android:contentDescription="@string/img_back_description"
 		        android:src="@drawable/ic_menu_back" />
 
 		    <ProgressBar
 		        android:id="@+id/progressBar"
 		        style="?android:attr/progressBarStyleHorizontal"
-		        android:layout_marginLeft="55dp"
-		        android:layout_marginRight="55dp"
+		        android:layout_marginLeft="65dp"
+		        android:layout_marginRight="65dp"
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_centerInParent="true" />
