@@ -11,6 +11,7 @@ public class SimpleMessage extends PPTMessage {
 	}
 	
 	private byte msgID;
+	
 	@Override
 	public byte getMessageId() {
 		return msgID;
@@ -19,10 +20,8 @@ public class SimpleMessage extends PPTMessage {
 	@Override
 	public void write(DataOutputStream sw) throws IOException {
 	}
-
+ 
 	@Override
-	public void read(DataInputStream sr) throws IOException {
-		
+	public void read(DataInputStream sr) throws IOException {		
 	}
-
 }

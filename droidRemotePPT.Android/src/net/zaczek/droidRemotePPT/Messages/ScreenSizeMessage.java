@@ -12,6 +12,7 @@ public class ScreenSizeMessage extends PPTMessage {
 		this.width = width;
 		this.height = height;
 	}
+
 	@Override
 	public byte getMessageId() {
 		return PPTMessage.MESSAGE_SCREEN_SIZE;
@@ -22,9 +23,9 @@ public class ScreenSizeMessage extends PPTMessage {
 		sw.writeInt(width);
 		sw.writeInt(height);		
 	}
+	
 	@Override
 	public void read(DataInputStream sr) throws IOException {
-		
 	}
 
 }

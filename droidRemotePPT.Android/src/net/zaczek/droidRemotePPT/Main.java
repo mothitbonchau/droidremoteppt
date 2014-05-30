@@ -9,6 +9,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
@@ -20,6 +21,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Main extends ActionBarActivity {
@@ -38,6 +40,9 @@ public class Main extends ActionBarActivity {
             onConnectedToServerFailed();
         }
     };
+	public TextView textViewHeaderMainMessage;
+	public TextView noBluetooth;
+
     
 	/** Called when the activity is first created. */
 	@Override
@@ -45,6 +50,9 @@ public class Main extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		setTitle(R.string.app_title);
+		RemoteControl.markedSlide = 1;
+		RemoteControl.currSlide = 0;
+		noBluetooth = (TextView)findViewById(R.id.noBluetooth);
 		
 		mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 		if (mBluetoothAdapter == null) {
@@ -54,7 +62,8 @@ public class Main extends ActionBarActivity {
 			fillDevices();
 		}
 	}
-
+	
+	
 	protected void onConnectedToServerFailed() {
 		Toast.makeText(getApplicationContext(), "Unable to connect to Server", Toast.LENGTH_LONG).show();
 	}
@@ -91,6 +100,15 @@ public class Main extends ActionBarActivity {
 				lstDevices.add(new DeviceListViewItem(device));
 			}
 		}
+		if(lstDevices == null || lstDevices.size() == 0 )
+		{	
+			noBluetooth.setVisibility(View.VISIBLE);
+		}
+		else
+		{
+			noBluetooth.setVisibility(View.GONE);
+		}
+		
 		ArrayAdapter<DeviceListViewItem> adapter = new ArrayAdapter<DeviceListViewItem>(getApplicationContext(), R.layout.devicelist_item, lstDevices);
 		
 		ListView lstView = (ListView) findViewById(R.id.lstDevices);

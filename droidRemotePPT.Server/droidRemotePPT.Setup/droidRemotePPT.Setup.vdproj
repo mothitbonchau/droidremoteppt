@@ -33,24 +33,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
-        "OwnerKey" = "8:_CFC22E4329B620956D961D70DA415347"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
-        "OwnerKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
-        "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -75,20 +57,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_7F50A22856D5E9656A5E232270D1A5A4"
-        "OwnerKey" = "8:_CFC22E4329B620956D961D70DA415347"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7F50A22856D5E9656A5E232270D1A5A4"
-        "OwnerKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7F50A22856D5E9656A5E232270D1A5A4"
+        "MsmKey" = "8:_532A07B6FFA100FD804243CBE07DFA7B"
         "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5970AF63ADE5BEC3858A63D4B88541BC"
+        "OwnerKey" = "8:_532A07B6FFA100FD804243CBE07DFA7B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5970AF63ADE5BEC3858A63D4B88541BC"
+        "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5970AF63ADE5BEC3858A63D4B88541BC"
+        "OwnerKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -105,14 +93,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_93F8DA6621194555884A9E545612251C"
+        "MsmKey" = "8:_999E42143C594931B2318AF3F12BD252"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AF3CEF0704405DBBA108A4AF735A8F5F"
+        "OwnerKey" = "8:_532A07B6FFA100FD804243CBE07DFA7B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AF3CEF0704405DBBA108A4AF735A8F5F"
         "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_999E42143C594931B2318AF3F12BD252"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_AF3CEF0704405DBBA108A4AF735A8F5F"
+        "OwnerKey" = "8:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -123,7 +123,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_CFC22E4329B620956D961D70DA415347"
+        "MsmKey" = "8:_FC1F641B6B5544E1922876750843A4F9"
         "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -136,49 +136,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7F50A22856D5E9656A5E232270D1A5A4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CFC22E4329B620956D961D70DA415347"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_86D782C28B3778208B9CA91C2082DF5C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_27EBC3A667D8795292D2BBDFEF58CF67"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C26B60D25130619E2832B99BE34CF125"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_910DCFAE37913DFC812BF0C50B710771"
+        "OwnerKey" = "8:_FC1F641B6B5544E1922876750843A4F9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -190,7 +148,49 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_93F8DA6621194555884A9E545612251C"
+        "OwnerKey" = "8:_910DCFAE37913DFC812BF0C50B710771"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C26B60D25130619E2832B99BE34CF125"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_27EBC3A667D8795292D2BBDFEF58CF67"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_86D782C28B3778208B9CA91C2082DF5C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5970AF63ADE5BEC3858A63D4B88541BC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_AF3CEF0704405DBBA108A4AF735A8F5F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_532A07B6FFA100FD804243CBE07DFA7B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_1E94E59DF99147D6B17FA3998EFAF8BD"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -310,44 +310,8 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_27EBC3A667D8795292D2BBDFEF58CF67"
-                    {
-                    "Name" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.VisualStudio.Tools.Applications.Runtime.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:InTheHand.Net.Personal, Version=3.0.2.0, Culture=neutral, PublicKeyToken=ea38caa273134499, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_294EBD4D5EC44E5FDF1FC9CDBCFBD413"
-                    {
-                    "Name" = "8:InTheHand.Net.Personal.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:InTheHand.Net.Personal.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
@@ -392,11 +356,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_3D511F1EBD0D4C1D7AE295D8B9C60673"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.dll"
             "TargetName" = "8:"
@@ -416,20 +375,41 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7F50A22856D5E9656A5E232270D1A5A4"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_532A07B6FFA100FD804243CBE07DFA7B"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:log4net, Version=1.2.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:droidRemotePPT.Server, Version=1.2.1.2, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_7F50A22856D5E9656A5E232270D1A5A4"
-                    {
-                    "Name" = "8:log4net.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
-            "SourcePath" = "8:log4net.dll"
+            "SourcePath" = "8:droidRemotePPT.Server.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5970AF63ADE5BEC3858A63D4B88541BC"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:InTheHand.Net.Personal, Version=3.0.2.0, Culture=neutral, PublicKeyToken=ea38caa273134499, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                }
+            "SourcePath" = "8:InTheHand.Net.Personal.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
@@ -454,11 +434,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_86D782C28B3778208B9CA91C2082DF5C"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.v4.0.Framework.dll"
             "TargetName" = "8:"
@@ -485,44 +460,8 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_910DCFAE37913DFC812BF0C50B710771"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.Common.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Common.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_93F8DA6621194555884A9E545612251C"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-                "ScatterAssemblies"
-                {
-                    "_93F8DA6621194555884A9E545612251C"
-                    {
-                    "Name" = "8:stdole.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:stdole.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
@@ -560,6 +499,32 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AF3CEF0704405DBBA108A4AF735A8F5F"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:log4net, Version=1.2.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                }
+            "SourcePath" = "8:log4net.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C26B60D25130619E2832B99BE34CF125"
             {
             "AssemblyRegister" = "3:1"
@@ -567,11 +532,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_C26B60D25130619E2832B99BE34CF125"
-                    {
-                    "Name" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
             "TargetName" = "8:"
@@ -591,20 +551,15 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CFC22E4329B620956D961D70DA415347"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FC1F641B6B5544E1922876750843A4F9"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:droidRemotePPT.Server, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_CFC22E4329B620956D961D70DA415347"
-                    {
-                    "Name" = "8:droidRemotePPT.Server.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
-            "SourcePath" = "8:droidRemotePPT.Server.dll"
+            "SourcePath" = "8:stdole.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
@@ -1316,7 +1271,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_1E94E59DF99147D6B17FA3998EFAF8BD"
             {
-            "SourcePath" = "8:..\\droidRemotePPT.PowerPointAddIn\\obj\\Release\\droidRemotePPT.PowerPointAddIn.dll"
+            "SourcePath" = "8:..\\droidRemotePPT.PowerPointAddIn\\obj\\Debug\\droidRemotePPT.PowerPointAddIn.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"
@@ -1344,7 +1299,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_2D4770BEDC8B4C5E9CFE49CCBF1A8AF3"
             {
-            "SourcePath" = "8:..\\droidRemotePPT.Server\\obj\\x86\\Release\\droidRemotePPT.Server.dll"
+            "SourcePath" = "8:..\\droidRemotePPT.Server\\obj\\x86\\Debug\\droidRemotePPT.Server.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6426857EE9AD46579FFD8E6BF77B48C3"

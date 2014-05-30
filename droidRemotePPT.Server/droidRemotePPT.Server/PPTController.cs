@@ -12,6 +12,8 @@ namespace droidRemotePPT.Server
     {
         private PPT.Application app;
 
+        
+
         public PPTConnection()
         {
             app = new PPT.Application();
@@ -43,8 +45,25 @@ namespace droidRemotePPT.Server
 
     public class PPTController : PPTConnection
     {
+        public static int MarkedSlide;
+//        public static int NewFunc;
+    
         public PPTController()
         {
+
+            MarkedSlide = 1;
+            black = false;
+        }
+
+        public string SendVersion()
+        {
+            if (!IsActive)
+            {
+//                return Convert.ToInt32(Presentation.Application.Version);
+                return (Presentation.Application.Version);
+            }
+            return null;
+
         }
 
         public PPTController(PPT.Application application)
@@ -70,6 +89,72 @@ namespace droidRemotePPT.Server
             }
         }
 
+
+        public void MarkSlide()
+        {
+            if (!IsActive) return;
+           
+            MarkedSlide = CurrentSlide;
+
+        }
+        
+        public void BlackScreen()
+        {
+            if (!IsActive) return;
+                        System.Windows.Forms.SendKeys.SendWait("{b}");
+
+            //            Start();
+
+            //            Presentation.SlideShowWindow.View.EraseDrawing();
+            //MarkedSlide = Presentation.SlideShowWindow.View.CurrentShowPosition;
+            MarkedSlide = CurrentSlide;
+/*
+            Presentation.SlideShowWindow.View.Last();
+            NextSlide();
+
+            SetCurrentSlide(MarkedSlide);
+*/
+            black = true;
+
+        }
+
+        public void UnBlackScreen()
+        {
+            if (!IsActive) return;
+            Presentation.SlideShowWindow.View.GotoSlide(MarkedSlide);
+
+            black = false;
+        }
+
+        public void SelectSlide(int slide)
+        {
+            if (!IsActive) return;
+
+//           slide = MarkedSlide;
+           MarkedSlide = CurrentSlide;
+            
+            Presentation.SlideShowWindow.View.GotoSlide(slide);
+            
+        }
+
+        public void EndPresentation()
+        {
+            if (!IsActive) return;
+            Presentation.SlideShowWindow.View.Exit();
+        }
+
+        public void FirstPage()
+        {
+            if (!IsActive) return;
+            Presentation.SlideShowWindow.View.First();
+        }
+
+        public void LastPage()
+        {
+            if (!IsActive) return;
+            Presentation.SlideShowWindow.View.Last();
+        }
+
         public void NextSlide()
         {
             if (!IsActive) return;
@@ -79,13 +164,33 @@ namespace droidRemotePPT.Server
         public void PrevSlide()
         {
             if (!IsActive) return;
-            Presentation.SlideShowWindow.View.Previous();
+           Presentation.SlideShowWindow.View.Previous();
         }
 
         public void Start()
         {
             if (Presentation == null) return;
             Presentation.SlideShowSettings.Run();
+        }
+
+        public string GetSlideNotes()
+        {
+            if (!IsActive) return "";
+            string text = "";
+ 
+            int i = 0;
+            for (i = 2; i <= 3; i++)
+            {
+                if (CurrentSlide <= TotalSlides && Presentation.Slides[CurrentSlide].NotesPage.Shapes[i].HasTextFrame == MsoTriState.msoTrue)
+                    if (text != "")
+                    {
+                        text += "\n\nLower notes:\n\n\t";
+                        text += Presentation.Slides[CurrentSlide].NotesPage.Shapes[i].TextFrame.TextRange.Text.ToString().Trim();
+                    }
+                    else
+                        text = Presentation.Slides[CurrentSlide].NotesPage.Shapes[i].TextFrame.TextRange.Text.ToString().Trim();
+            }
+            return text;
         }
 
         public Image GetSlideImage()
@@ -114,12 +219,36 @@ namespace droidRemotePPT.Server
             }
         }
 
+
+        void SetCurrentSlide(int var)
+        {
+            CurrentSlide = (var);
+        }
+
+        private int _CurrentSlide;
+
+        bool black;
+
+        public static int Version;
+
         public int CurrentSlide
         {
+            
             get
             {
                 if (!IsActive) return 0;
-                return Presentation.SlideShowWindow.View.CurrentShowPosition;
+//                if (black)
+                {
+                    return Presentation.SlideShowWindow.View.CurrentShowPosition;
+                }
+//                else
+                {
+//                    return _CurrentSlide;
+                }
+            }
+            set
+            {
+                _CurrentSlide = value;
             }
         }
 

@@ -7,7 +7,7 @@ import java.io.IOException;
 import net.zaczek.droidRemotePPT.Messages.PPTMessage;
 import net.zaczek.droidRemotePPT.Messages.SimpleMessage;
 import net.zaczek.droidRemotePPT.Messages.SlideChangedMessage;
-
+import net.zaczek.droidRemotePPT.Messages.NotesMessage;
 
 import android.bluetooth.BluetoothSocket;
 import android.os.Handler;
@@ -42,7 +42,7 @@ public class BluetoothThread extends Thread {
 		try {
 			socket.close();
 		} catch (IOException e) {
-			// dont care
+			// don't care
 			e.printStackTrace();
 		}
 	}
@@ -75,9 +75,14 @@ public class BluetoothThread extends Thread {
 					continue;
 				PPTMessage msg;
 				switch (msgID) {
+//				case PPTMessage.MESSAGE_SELECT_PAGE:
 				case PPTMessage.MESSAGE_SLIDE_CHANGED:
 					msg = new SlideChangedMessage();
 					break;
+				case PPTMessage.MESSAGE_NOTES:
+					msg = new NotesMessage();
+					break;
+				
 				default:
 					msg = new SimpleMessage(msgID);
 					break;

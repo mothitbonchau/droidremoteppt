@@ -10,7 +10,7 @@ namespace droidRemotePPT.Server
 {
     public class MessageDispatcher
     {
-        public Size ScreenSize = new Size();
+        public Size ScreenSize = new Size( );
         // More makes no sense, BT will take too long
         public static readonly Size MaxScreenSize = new Size(320, 200); 
 
@@ -35,7 +35,51 @@ namespace droidRemotePPT.Server
         {
             try
             {
-                if (msg is NextMessage)
+                if (msg is MarkPageMessage)
+                {
+                    _pptController.MarkSlide();
+                    SendSlideImage(_pptController.CurrentSlide, _pptController.TotalSlides);
+                }
+
+                else if (msg is ClearDrawingMessage)
+                {
+                    _pptController.NextSlide();
+                    SendSlideImage(_pptController.CurrentSlide, _pptController.TotalSlides);
+
+                }
+                else if (msg is EndMessage)
+                {
+                    _pptController.EndPresentation();
+                    SendSlideImage(_pptController.CurrentSlide, _pptController.TotalSlides);
+                }
+
+                else  if (msg is LastPageMessage)
+                {
+                    _pptController.LastPage();
+                    SendSlideImage(_pptController.CurrentSlide, _pptController.TotalSlides);
+                }
+
+                else if (msg is FirstPageMessage)
+                {
+                    _pptController.FirstPage();
+                    SendSlideImage(_pptController.CurrentSlide, _pptController.TotalSlides);
+
+                }
+
+                else if (msg is BlackScreenMessage)
+                {
+                    _pptController.BlackScreen();
+                    SendSlideImage(_pptController.CurrentSlide, _pptController.TotalSlides);
+
+                }
+
+                else if (msg is UnBlackScreenMessage)
+                {
+                    _pptController.UnBlackScreen();
+                    SendSlideImage(_pptController.CurrentSlide, _pptController.TotalSlides);
+
+                }
+                else if (msg is NextMessage)
                 {
                     _pptController.NextSlide();
                     SendSlideImage(_pptController.CurrentSlide, _pptController.TotalSlides);
@@ -50,6 +94,14 @@ namespace droidRemotePPT.Server
                     _pptController.Start();
                     SendSlideImage(_pptController.CurrentSlide, _pptController.TotalSlides);
                 }
+
+                else if (msg is SelectPageMessage)
+                {
+                    int slide = PPTMessage.slide;
+                    _pptController.SelectSlide(slide);
+                    SendSlideImage(_pptController.CurrentSlide, _pptController.TotalSlides);
+                }
+
                 else if (msg is ScreenSizeMessage)
                 {
                     ScreenSizeMessage ssm = (ScreenSizeMessage)msg;
@@ -60,6 +112,17 @@ namespace droidRemotePPT.Server
                         ScreenSize = MaxScreenSize;
                     }
                 }
+                else if (msg is VersionMessage)
+                {
+
+                    _pptController.SendVersion();
+                    //int ver = _pptController.SendVersion();
+                    //   _btServer.SendMessage(PPTController.Version);
+                }else if (msg is NotesMessage)
+                {
+                    SendSlideNotes(_pptController.CurrentSlide, _pptController.TotalSlides);
+                }
+
                 else if (msg is DrawMessage)
                 {
                     DrawMessage dm = (DrawMessage)msg;
@@ -72,6 +135,15 @@ namespace droidRemotePPT.Server
             }
         }
 
+        private void SendSlideNotes(int currentSlide, int totalSlides)
+        {
+            string notes = _pptController.GetSlideNotes();
+            if (string.IsNullOrEmpty(notes)) return;
+            
+            var msg = new NotesMessage(currentSlide, totalSlides, notes);
+            _btServer.SendMessage(msg);
+        }
+
         private void SendSlideImage(int currentSlide, int totalSlides)
         {
             if (!ScreenSize.IsEmpty)
@@ -79,8 +151,10 @@ namespace droidRemotePPT.Server
                 var img = _pptController.GetSlideImage();
                 if (img == null) return;
 
+                var notes = _pptController.GetSlideNotes();
+
                 var smallImg = Utils.Resize(img, ScreenSize.Width);
-                var msg = new SlideChangedMessage(currentSlide, totalSlides, smallImg);
+                var msg = new SlideChangedMessage(currentSlide, totalSlides, smallImg, notes);//, _pptController.GetSlideNotes());
                 _btServer.SendMessage(msg);
             }
         }        

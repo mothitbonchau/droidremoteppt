@@ -7,6 +7,6 @@ namespace droidRemotePPT.Server
 {
     public static class Version
     {
-        public const string CURRENT_VERSION = "1.2.1.0";
+        public const string CURRENT_VERSION = "1.5.1";
     }
 }

@@ -11,6 +11,15 @@
 		android:layout_height="wrap_content" 
 		android:text="@string/main_hint" 
 		android:layout_marginTop="10dp"/>
+
+	<TextView
+	    android:id="@+id/noBluetooth"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="No bluetooth device available!"
+	    android:visibility="gone"
+	    android:textAppearance="?android:attr/textAppearanceLarge" />
+
 	<ListView android:id="@+id/lstDevices" 
 	    android:layout_width="fill_parent"
 		android:layout_height="fill_parent" 

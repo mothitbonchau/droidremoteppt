@@ -94,6 +94,11 @@ namespace droidRemotePPT.Server
             mBaseWriter.Write(ConvertBigEndianBytes(BitConverter.GetBytes(v)));
         }
 
+        public void Write(char v)
+        {
+            mBaseWriter.Write(ConvertBigEndianBytes(BitConverter.GetBytes(v)));
+        }
+
         public byte[] ConvertBigEndianBytes(byte[] input)
         {
             byte[] bytes = new byte[input.Length];

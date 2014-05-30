@@ -4,3 +4,4 @@ gen/
 packages/
 proguard/
 *.suo
+Debug/

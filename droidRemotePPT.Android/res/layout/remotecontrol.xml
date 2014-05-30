@@ -8,14 +8,26 @@
 	<android.gesture.GestureOverlayView
 		android:eventsInterceptionEnabled="true" android:id="@+id/gestures"
 		android:layout_width="fill_parent" 
-		android:layout_height="fill_parent">
+		android:layout_height="fill_parent"
+		android:orientation="vertical">
+		
 		<ImageView 
 		    android:layout_height="fill_parent" 
 		    android:id="@+id/imgPPT"
 		    android:scaleType="fitCenter"
 		    android:contentDescription="@string/img_slide_description"
 			android:layout_width="fill_parent"></ImageView>
+
+		<ImageView android:id="@+id/imgPPT" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/img_slide_description"/>
+
 	</android.gesture.GestureOverlayView>
+
+	<Button
+	    android:id="@+id/toStart"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="To 0/0" />
+	
 		<RelativeLayout
 		    android:id="@+id/LinearLayout02"
 		    android:layout_width="fill_parent"
@@ -34,6 +46,7 @@
 		        android:layout_height="50dp"
 				android:scaleType="fitCenter"		        
 		        android:contentDescription="@string/img_forward_description"
+		        android:visibility="visible"
 		        android:src="@drawable/ic_menu_forward" />
 
 		    <ImageButton
@@ -43,6 +56,8 @@
 		        android:layout_height="50dp"
 		        android:scaleType="fitCenter"		        
 		        android:contentDescription="@string/img_back_description"
+		        		        android:visibility="visible"
+		        
 		        android:src="@drawable/ic_menu_back" />
 
 		    <ProgressBar
@@ -54,5 +69,87 @@
 		        android:layout_height="wrap_content"
 		        android:layout_centerInParent="true" />
 
+		    <Button
+		        android:id="@+id/nextEnd"
+		        android:layout_width="60dp"
+		        android:layout_height="50dp"
+		        android:layout_alignParentBottom="true"
+		        android:layout_alignParentRight="true"
+		        android:visibility="gone"
+		        android:text="End" />
+		    
 		</RelativeLayout>
+
+		<TextView
+		    android:id="@+id/slideCounter"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignParentTop="true"
+		    android:text="0/0"
+		    		        		        android:visibility="visible"
+		    
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<ToggleButton
+		    android:id="@+id/toggleScreen"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignBaseline="@+id/endButton"
+		    android:layout_alignBottom="@+id/endButton"
+		    android:layout_alignParentLeft="true"
+		    android:textOff="Black"
+		    android:textOn="Unblack" />
+
+		<Button
+		    android:id="@+id/endButton"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:layout_below="@+id/slideCounter"
+		    android:layout_marginTop="41dp"
+		    android:text="End" />
+
+		<ImageView
+		    android:id="@+id/imgPrev"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_centerVertical="true"
+		    		        android:visibility="gone"
+		    
+		    android:src="@drawable/ic_menu_back" />
+
+		<ImageView
+		    android:id="@+id/imgNext"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    		        android:visibility="gone"
+		    
+		    android:src="@drawable/ic_menu_forward" />
+
+		<ToggleButton
+		    android:id="@+id/toggleNotes"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/toggleScreen"
+		    android:layout_marginTop="18dp"
+		    android:text="ToggleButton"
+		    android:textOff="Notes"
+		    android:textOn="Slides" />
+
+		<TextView
+		    android:id="@+id/notesView"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_above="@+id/LinearLayout02"
+		    android:layout_alignParentTop="true"
+		    android:layout_toLeftOf="@+id/endButton"
+		    android:layout_toRightOf="@+id/toStart"
+		    android:scrollbars="vertical"
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
 </RelativeLayout>
