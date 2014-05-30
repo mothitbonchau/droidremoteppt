@@ -1,11 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "droidRemotePPT.Server", "droidRemotePPT.Server\droidRemotePPT.Server.csproj", "{DA109573-F271-48BC-8705-178ECECC9B7B}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "droidRemotePPT.Setup", "droidRemotePPT.Setup\droidRemotePPT.Setup.vdproj", "{D9115415-A515-4101-BD8D-62F26C5D2F4A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "droidRemotePPT.PowerPointAddIn", "droidRemotePPT.PowerPointAddIn\droidRemotePPT.PowerPointAddIn.csproj", "{02EAB8B7-4D24-41DC-9856-F48E36E1D663}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1ED90AFA-4851-41E8-A8F1-046F3A01B2D6}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1ED90A
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "droidRemotePPT.PowerPointAddIn", "droidRemotePPT.PowerPointAddIn\droidRemotePPT.PowerPointAddIn.csproj", "{5DAFC823-0F1C-4ACD-9380-30B67938E3B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,25 +34,16 @@ Global
 		{DA109573-F271-48BC-8705-178ECECC9B7B}.Release|Mixed Platforms.Build.0 = Release|x86
 		{DA109573-F271-48BC-8705-178ECECC9B7B}.Release|x86.ActiveCfg = Release|x86
 		{DA109573-F271-48BC-8705-178ECECC9B7B}.Release|x86.Build.0 = Release|x86
-		{D9115415-A515-4101-BD8D-62F26C5D2F4A}.Debug|Any CPU.ActiveCfg = Debug
-		{D9115415-A515-4101-BD8D-62F26C5D2F4A}.Debug|Any CPU.Build.0 = Debug
-		{D9115415-A515-4101-BD8D-62F26C5D2F4A}.Debug|Mixed Platforms.ActiveCfg = Debug
-		{D9115415-A515-4101-BD8D-62F26C5D2F4A}.Debug|x86.ActiveCfg = Debug
-		{D9115415-A515-4101-BD8D-62F26C5D2F4A}.Release|Any CPU.ActiveCfg = Release
-		{D9115415-A515-4101-BD8D-62F26C5D2F4A}.Release|Any CPU.Build.0 = Release
-		{D9115415-A515-4101-BD8D-62F26C5D2F4A}.Release|Mixed Platforms.ActiveCfg = Release
-		{D9115415-A515-4101-BD8D-62F26C5D2F4A}.Release|Mixed Platforms.Build.0 = Release
-		{D9115415-A515-4101-BD8D-62F26C5D2F4A}.Release|x86.ActiveCfg = Release
-		{02EAB8B7-4D24-41DC-9856-F48E36E1D663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02EAB8B7-4D24-41DC-9856-F48E36E1D663}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02EAB8B7-4D24-41DC-9856-F48E36E1D663}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{02EAB8B7-4D24-41DC-9856-F48E36E1D663}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{02EAB8B7-4D24-41DC-9856-F48E36E1D663}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{02EAB8B7-4D24-41DC-9856-F48E36E1D663}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02EAB8B7-4D24-41DC-9856-F48E36E1D663}.Release|Any CPU.Build.0 = Release|Any CPU
-		{02EAB8B7-4D24-41DC-9856-F48E36E1D663}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{02EAB8B7-4D24-41DC-9856-F48E36E1D663}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{02EAB8B7-4D24-41DC-9856-F48E36E1D663}.Release|x86.ActiveCfg = Release|Any CPU
+		{5DAFC823-0F1C-4ACD-9380-30B67938E3B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DAFC823-0F1C-4ACD-9380-30B67938E3B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DAFC823-0F1C-4ACD-9380-30B67938E3B7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5DAFC823-0F1C-4ACD-9380-30B67938E3B7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5DAFC823-0F1C-4ACD-9380-30B67938E3B7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5DAFC823-0F1C-4ACD-9380-30B67938E3B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DAFC823-0F1C-4ACD-9380-30B67938E3B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DAFC823-0F1C-4ACD-9380-30B67938E3B7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5DAFC823-0F1C-4ACD-9380-30B67938E3B7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5DAFC823-0F1C-4ACD-9380-30B67938E3B7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,3 +5,4 @@ packages/
 proguard/
 *.suo
 Debug/
+/droidRemotePPT.Server/droidRemotePPT.PowerPointAddIn/droidRemotePPT.PowerPointAddIn.csproj.user
