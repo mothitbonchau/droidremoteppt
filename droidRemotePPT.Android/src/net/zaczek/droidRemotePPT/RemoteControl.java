@@ -45,7 +45,7 @@ public class RemoteControl extends Activity implements
 	private GestureLibrary mGestureLibrary;
 	private ImageButton btnNext;
 	private ImageButton btnPrev;
-	private Button button1;
+	private Button btnToStart;
 	private ToggleButton tgglScrn;
 	private ToggleButton tgglNotes;
 	private ToggleButton tgglOrienation;
@@ -149,7 +149,7 @@ public class RemoteControl extends Activity implements
 		btnNext = (ImageButton) findViewById(R.id.btnNext);
 		btnPrev = (ImageButton) findViewById(R.id.btnPrev);
 		progressBar = (ProgressBar) findViewById(R.id.progressBar);
-		button1 = (Button) findViewById(R.id.toStart);
+		btnToStart = (Button) findViewById(R.id.toStart);
 		slideCounter = (TextView) findViewById(R.id.slideCounter);
 		notesView = (TextView) findViewById(R.id.notesView);
 		endButton = (Button) findViewById(R.id.endButton);
@@ -261,7 +261,7 @@ public class RemoteControl extends Activity implements
 			}
 		});
 
-		button1.setOnClickListener(new OnClickListener() {
+		btnToStart.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				sendSlide(markedSlide);
@@ -421,7 +421,7 @@ public class RemoteControl extends Activity implements
 	private void markSlide(int slide) {
 		if (slide < totalSlides) {
 			markedSlide = slide;
-			button1.setText("To " + slide + "/" + totalSlides);
+			btnToStart.setText("To " + slide + "/" + totalSlides);
 			System.out.println("\nmarkedSlide=" + markedSlide);
 		}
 	}
