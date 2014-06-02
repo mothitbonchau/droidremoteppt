@@ -50,8 +50,6 @@ public class Main extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		setTitle(R.string.app_title);
-		RemoteControl.markedSlide = 1;
-		RemoteControl.currSlide = 0;
 		noBluetooth = (TextView)findViewById(R.id.noBluetooth);
 		
 		mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();

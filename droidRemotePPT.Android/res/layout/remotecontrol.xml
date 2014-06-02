@@ -66,15 +66,7 @@
             android:layout_centerInParent="true"
             android:layout_marginLeft="65dp"
             android:layout_marginRight="65dp" />
-
-        <Button
-            android:id="@+id/nextEnd"
-            android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:text="End"
-            android:visibility="gone" />
+       
     </RelativeLayout>
 
     <TextView
@@ -105,24 +97,6 @@
         android:layout_below="@+id/slideCounter"
         android:layout_marginTop="41dp"
         android:text="End" />
-
-    <ImageView
-        android:id="@+id/imgPrev"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/ic_menu_back"
-        android:visibility="gone" />
-
-    <ImageView
-        android:id="@+id/imgNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/ic_menu_forward"
-        android:visibility="gone" />
 
     <ToggleButton
         android:id="@+id/toggleNotes"
