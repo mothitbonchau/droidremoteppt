@@ -17,11 +17,10 @@
             android:id="@+id/imgPPT"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:contentDescription="@string/img_slide_description"
             android:background="@android:color/transparent"
+            android:contentDescription="@string/img_slide_description"
             android:scaleType="fitCenter"
             android:src="@drawable/icon" >
-
         </ImageView>
 
         <TextView
@@ -30,6 +29,15 @@
             android:layout_height="fill_parent"
             android:scrollbars="vertical"
             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/slideCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:text="0/0"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="visible" />
     </android.gesture.GestureOverlayView>
 
     <RelativeLayout
@@ -73,66 +81,58 @@
             android:layout_marginRight="65dp" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <TableLayout
         android:id="@+id/layoutControls"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" >
 
-        <Button
-            android:id="@+id/toStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="To 0/0" />
+        <TableRow>
 
-        <TextView
-            android:id="@+id/slideCounter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:text="0/0"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:visibility="visible" />
+            <Button
+                android:id="@+id/toStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="To 0/0" />
 
-        <ToggleButton
-            android:id="@+id/toggleScreen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/endButton"
-            android:layout_alignBottom="@+id/endButton"
-            android:layout_alignParentLeft="true"
-            android:textOff="Black"
-            android:textOn="Unblack" />
+            <Button
+                android:id="@+id/endButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="End" />
+        </TableRow>
 
-        <Button
-            android:id="@+id/endButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/slideCounter"
-            android:layout_marginTop="41dp"
-            android:text="End" />
+        <TableRow>
 
-        <ToggleButton
-            android:id="@+id/toggleNotes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/toggleScreen"
-            android:layout_marginTop="18dp"
-            android:textOff="Notes"
-            android:textOn="Slides" />
+            <ToggleButton
+                android:id="@+id/toggleScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="Black"
+                android:textOn="Unblack" />
+        </TableRow>
 
-        <ToggleButton
-            android:id="@+id/toggleOrientation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/endButton"
-            android:layout_marginTop="18dp"
-            android:textOff="L"
-            android:textOn="P" />
-    </RelativeLayout>
+        <TableRow>
+
+            <ToggleButton
+                android:id="@+id/toggleNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="Notes"
+                android:textOn="Slides" />
+
+            <ToggleButton
+                android:id="@+id/toggleOrientation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="L"
+                android:textOn="P" />
+        </TableRow>
+    </TableLayout>
 
 </RelativeLayout>
