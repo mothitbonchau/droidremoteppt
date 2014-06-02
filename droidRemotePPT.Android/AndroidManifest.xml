@@ -37,6 +37,7 @@
         <activity
             android:name="net.zaczek.droidRemotePPT.RemoteControl"
             android:label="@string/remote_control"
+            android:screenOrientation="portrait" 
             android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="dasz.droidRemotePPT.CONTROL" />

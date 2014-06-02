@@ -105,9 +105,18 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/toggleScreen"
         android:layout_marginTop="18dp"
-        android:text="ToggleButton"
         android:textOff="Notes"
         android:textOn="Slides" />
+    
+    <ToggleButton
+        android:id="@+id/toggleOrientation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/endButton"
+        android:layout_marginTop="18dp"
+        android:textOff="L"
+        android:textOn="P" />
 
     <TextView
         android:id="@+id/notesView"

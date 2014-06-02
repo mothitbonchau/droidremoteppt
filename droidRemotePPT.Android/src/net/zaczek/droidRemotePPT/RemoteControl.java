@@ -9,10 +9,10 @@ import net.zaczek.droidRemotePPT.Messages.SlideChangedMessage;
 import net.zaczek.droidRemotePPT.Messages.SelectSlideMessage;
 import net.zaczek.droidRemotePPT.Messages.VersionMessage;
 import net.zaczek.droidRemotePPT.Main;
-
 import net.zaczek.droidRemotePPT.R;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.gesture.Gesture;
 import android.gesture.GestureLibraries;
 import android.gesture.GestureLibrary;
@@ -48,6 +48,7 @@ public class RemoteControl extends Activity implements
 	private Button button1;
 	private ToggleButton tgglScrn;
 	private ToggleButton tgglNotes;
+	private ToggleButton tgglOrienation;
 	private ProgressBar progressBar;
 	private BluetoothThread btThread;
 	private TextView slideCounter;
@@ -155,6 +156,7 @@ public class RemoteControl extends Activity implements
 
 		tgglScrn = (ToggleButton) findViewById(R.id.toggleScreen);
 		tgglNotes = (ToggleButton) findViewById(R.id.toggleNotes);
+		tgglOrienation = (ToggleButton)findViewById(R.id.toggleOrientation);
 
 		gestView.addOnGesturePerformedListener(this);
 
@@ -264,6 +266,18 @@ public class RemoteControl extends Activity implements
 			public void onClick(View v) {
 				sendSlide(markedSlide);
 				markSlide(currSlide);
+			}
+		});
+		
+		tgglOrienation.setOnCheckedChangeListener(new ToggleButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView,
+					boolean isChecked) {
+				if(isChecked) {
+					setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+				} else {
+					setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+				}
 			}
 		});
 	}
