@@ -13,6 +13,7 @@ import net.zaczek.droidRemotePPT.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.gesture.Gesture;
 import android.gesture.GestureLibraries;
 import android.gesture.GestureLibrary;
@@ -135,8 +136,6 @@ public class RemoteControl extends Activity implements
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-		setContentView(R.layout.remotecontrol);
-
 		mGestureLibrary = GestureLibraries
 				.fromRawResource(this, R.raw.gestures);
 		if (!mGestureLibrary.load()) {
@@ -144,6 +143,11 @@ public class RemoteControl extends Activity implements
 			finish();
 		}
 
+		initUI();
+	}
+
+	private void initUI() {
+		setContentView(R.layout.remotecontrol);
 		imgView = (ImageView) findViewById(R.id.imgPPT);
 		gestView = (GestureOverlayView) findViewById(R.id.gestures);
 		btnNext = (ImageButton) findViewById(R.id.btnNext);
@@ -156,7 +160,7 @@ public class RemoteControl extends Activity implements
 
 		tgglScrn = (ToggleButton) findViewById(R.id.toggleScreen);
 		tgglNotes = (ToggleButton) findViewById(R.id.toggleNotes);
-		tgglOrienation = (ToggleButton)findViewById(R.id.toggleOrientation);
+		tgglOrienation = (ToggleButton) findViewById(R.id.toggleOrientation);
 
 		gestView.addOnGesturePerformedListener(this);
 
@@ -198,19 +202,18 @@ public class RemoteControl extends Activity implements
 			}
 		});
 
-		if (currSlide <= totalSlides)
-			tgglScrn.setOnCheckedChangeListener(new ToggleButton.OnCheckedChangeListener() {
-				public void onCheckedChanged(CompoundButton buttonView,
-						boolean isChecked) {
-					if ((checkVersion() || isChecked)) {
-						sendBlack();
-					} else {
-						if (currSlide <= totalSlides)
-							sendUnBlack();
-					}
+		tgglScrn.setOnCheckedChangeListener(new ToggleButton.OnCheckedChangeListener() {
+			public void onCheckedChanged(CompoundButton buttonView,
+					boolean isChecked) {
+				if ((checkVersion() || isChecked)) {
+					sendBlack();
+				} else {
+					if (currSlide <= totalSlides)
+						sendUnBlack();
 				}
+			}
 
-			});
+		});
 
 		slideCounter.setOnClickListener(new View.OnClickListener() {
 
@@ -268,18 +271,28 @@ public class RemoteControl extends Activity implements
 				markSlide(currSlide);
 			}
 		});
-		
-		tgglOrienation.setOnCheckedChangeListener(new ToggleButton.OnCheckedChangeListener() {
-			@Override
-			public void onCheckedChanged(CompoundButton buttonView,
-					boolean isChecked) {
-				if(isChecked) {
-					setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-				} else {
-					setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-				}
-			}
-		});
+
+		if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+			tgglOrienation.setChecked(true);
+		}
+		tgglOrienation
+				.setOnCheckedChangeListener(new ToggleButton.OnCheckedChangeListener() {
+					@Override
+					public void onCheckedChanged(CompoundButton buttonView,
+							boolean isChecked) {
+						if (isChecked) {
+							setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+						} else {
+							setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+						}
+					}
+				});
+	}
+
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		initUI();
 	}
 
 	@Override
