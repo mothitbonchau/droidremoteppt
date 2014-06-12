@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="droid Remote PPT" Language="1033" Version="1.0.0.0" Manufacturer="Arthur Zaczek" UpgradeCode="27d84e8b-4f63-48f0-9e4d-83cd94d9fe93">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- http://stackoverflow.com/questions/16408599/prevent-services-from-losing-settings-on-major-upgrade-in-wix -->
+    <InstallExecuteSequence>
+      <InstallServices>NOT WIX_UPGRADE_DETECTED</InstallServices>
+    </InstallExecuteSequence>
+
+    <Feature Id="ProductFeature" Title="droidRemotePPT.Setup" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+    </Feature>
+
+    <WixVariable Id="WixUILicenseRtf" Value="..\License.rtf" />
+    <UIRef Id="WixUI_Minimal" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="droidRemotePPT">
+          <Component Id="AddInComponent" Guid="{62EE0C35-3263-4540-98ED-E4736ED235B6}">
+            <File Id='AddInDLL' Name='droidRemotePPT.PowerPointAddIn.dll' DiskId='1' Source='..\droidRemotePPT.PowerPointAddIn\bin\Release\droidRemotePPT.PowerPointAddIn.dll' />
+          </Component>
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <ComponentRef Id="AddInComponent"/>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
