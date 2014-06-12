@@ -14,6 +14,20 @@
     <Feature Id="ProductFeature" Title="droidRemotePPT.Setup" Level="1">
       <ComponentGroupRef Id="ProductComponents" />
     </Feature>
+    
+    <!-- http://blogs.msdn.com/b/gsmyth/archive/2013/01/27/wix-installer-for-vsto-projects.aspx -->
+    <PropertyRef Id="NETFRAMEWORK40CLIENT" />
+    <Condition Message="This tool requires .NET Framework 4.0. Please install the .NET Framework then run this installer again.">
+      <![CDATA[Installed OR NETFRAMEWORK40CLIENT]]>
+    </Condition>
+
+    <Property Id="VSTOR40">
+      <RegistrySearch Id="VSTOR_Installed"
+                      Root="HKLM" Key="SOFTWARE\Microsoft\VSTO Runtime Setup\v4R" Name="VSTORFeature_CLR40" Type="raw" />
+    </Property>
+    <Condition Message="This tool requires the VSTO 4.0 Runtime. Please install the VSTO runtime then run this installer again.">
+      <![CDATA[Installed OR (VSTOR40 OR NOT OFFICE2007)]]>
+    </Condition>
 
     <WixVariable Id="WixUILicenseRtf" Value="..\License.rtf" />
     <UIRef Id="WixUI_Minimal" />
@@ -25,7 +39,27 @@
       <Directory Id="ProgramFilesFolder">
         <Directory Id="INSTALLFOLDER" Name="droidRemotePPT">
           <Component Id="AddInComponent" Guid="{62EE0C35-3263-4540-98ED-E4736ED235B6}">
-            <File Id='AddInDLL' Name='droidRemotePPT.PowerPointAddIn.dll' DiskId='1' Source='..\droidRemotePPT.PowerPointAddIn\bin\Release\droidRemotePPT.PowerPointAddIn.dll' />
+            <File Id='AddInDLL' Name='droidRemotePPT.PowerPointAddIn.dll' DiskId='1' Source='..\droidRemotePPT.PowerPointAddIn\bin\Release\droidRemotePPT.PowerPointAddIn.dll' KeyPath="yes" />
+          </Component>
+          <Component Id="AddInVSTO" Guid="{6CB48B36-EAD9-4388-B087-9E4033A7DFDE}">
+            <File Id='AddInVSTO' Name='droidRemotePPT.PowerPointAddIn.vsto' DiskId='1' Source='..\droidRemotePPT.PowerPointAddIn\bin\Release\droidRemotePPT.PowerPointAddIn.vsto' KeyPath="yes" />
+            <RegistryKey Root="HKLM" Key="Software\Microsoft\Office\PowerPoint\Addins\droidRemotePPT.PowerPointAddIn">
+              <RegistryValue Name="Description" Value="droid Remote PowerPoint AddIn" Type="string" Action="write" />
+              <RegistryValue Name="FriendlyName" Value="droid Remote PowerPoint AddIn" Type="string" Action="write" />
+              <RegistryValue Name="LoadBehavior" Value="3" Type="integer" Action="write" />
+              <RegistryValue Name="Manifest" Value="[#AddInVSTO]|vstolocal" Type="string" Action="write" />
+            </RegistryKey>
+          </Component>
+          <Component Id="AddInManifest" Guid="{4E93BA62-66B0-4828-AB1B-6B253E1A8E38}">
+            <File Id='AddInManifest' Name='droidRemotePPT.PowerPointAddIn.dll.manifest' DiskId='1' Source='..\droidRemotePPT.PowerPointAddIn\bin\Release\droidRemotePPT.PowerPointAddIn.dll.manifest' KeyPath="yes" />
+          </Component>
+          <Component Id="AddInDependencies" Guid="{FC594278-D5DD-4936-B37E-1899627ACA4D}">
+            <File Id='AddInServer' Name='droidRemotePPT.Server.dll' DiskId='1' Source='..\droidRemotePPT.PowerPointAddIn\bin\Release\droidRemotePPT.Server.dll' />
+            <File Id='InTheHandDLL' Name='InTheHand.Net.Personal.dll' DiskId='1' Source='..\droidRemotePPT.PowerPointAddIn\bin\Release\InTheHand.Net.Personal.dll' />
+            <File Id='log4netDLL' Name='log4net.dll' DiskId='1' Source='..\droidRemotePPT.PowerPointAddIn\bin\Release\log4net.dll' />
+          </Component>
+          <Component Id="ToolsCommon">
+            <File Id="FILE_ToolsCommon" Source="..\droidRemotePPT.PowerPointAddIn\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll" KeyPath="yes" />
           </Component>
         </Directory>
       </Directory>
@@ -35,6 +69,10 @@
   <Fragment>
     <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
       <ComponentRef Id="AddInComponent"/>
+      <ComponentRef Id="AddInVSTO"/>
+      <ComponentRef Id="AddInManifest"/>
+      <ComponentRef Id="AddInDependencies"/>
+      <ComponentRef Id="ToolsCommon"/>
     </ComponentGroup>
   </Fragment>
 </Wix>
