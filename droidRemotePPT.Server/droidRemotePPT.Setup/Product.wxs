@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-  <Product Id="*" Name="droid Remote PPT" Language="1033" Version="1.3.0" Manufacturer="Arthur Zaczek" UpgradeCode="10400565-3F8E-47AF-BD98-5326361602B8">
+  <Product Id="*" Name="droid Remote for PPT" Language="1033" Version="1.5.1" Manufacturer="Arthur Zaczek" UpgradeCode="{10400565-3F8E-47AF-BD98-5326361602B8}">
     <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
     <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
