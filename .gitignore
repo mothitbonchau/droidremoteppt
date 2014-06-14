@@ -6,3 +6,4 @@ proguard/
 *.suo
 Debug/
 /droidRemotePPT.Server/droidRemotePPT.PowerPointAddIn/droidRemotePPT.PowerPointAddIn.csproj.user
+/droidRemotePPT.Server/droidRemotePPT.Setup/vstor_redist.exe
