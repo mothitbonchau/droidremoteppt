@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:bal="http://schemas.microsoft.com/wix/BalExtension" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  <Bundle Name="droid Remote for PPT" Version="1.5.1" Manufacturer="Arthur Zaczek" UpgradeCode="{10400565-3F8E-47AF-BD98-5326361602B8}">
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense">
+      <bal:WixStandardBootstrapperApplication LicenseFile="..\License.rtf" SuppressOptionsUI="yes" LogoFile="..\logo.png" />
+    </BootstrapperApplicationRef>
+
+    <util:RegistrySearch Id="Office2007_Installed" Variable="OFFICE2007"
+                         Root="HKLM" Key="Software\Microsoft\Office\12.0\Outlook\InstallRoot" Result="exists" />
+    <util:RegistrySearch Id="VSTOR_Installed" Variable="VSTOR40"
+                             Root="HKLM" Key="SOFTWARE\Microsoft\VSTO Runtime Setup\v4R" Result="exists" />
+    <Chain>
+      <PackageGroupRef Id="NetFx40Web" />
+      <ExePackage SourceFile="vstor_redist.exe" Permanent="yes" Vital="yes" Cache="no" Compressed="no"
+                  DownloadUrl="http://go.microsoft.com/fwlink/?LinkId=158917"
+                  InstallCommand="/q /norestart"
+                  DetectCondition="VSTOR40"
+                  InstallCondition="OFFICE2007 AND NOT VSTOR40" />
+      <MsiPackage SourceFile="$(var.droidRemotePPT.MSI.TargetPath)" Vital="yes" />
+    </Chain>
+  </Bundle>
+</Wix>
