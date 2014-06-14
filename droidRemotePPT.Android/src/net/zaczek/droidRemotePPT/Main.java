@@ -9,7 +9,6 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
@@ -145,6 +144,9 @@ public class Main extends ActionBarActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int itemId = item.getItemId();
 		switch (itemId) {
+		case R.id.action_refresh:
+			fillDevices();
+			return true;
 		case R.id.action_about:
 			startActivity(new Intent(this, About.class));
 			return true;
