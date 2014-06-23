@@ -115,10 +115,10 @@ public class RemoteControl extends Activity implements
 					}
 
 					if (outer.currSlide == 1) {
-						outer.btnPrev.setVisibility(View.GONE);
+						outer.btnPrev.setEnabled(false);
 
 					} else {
-						outer.btnPrev.setVisibility(View.VISIBLE);
+						outer.btnPrev.setEnabled(true);
 					}
 				}
 			}

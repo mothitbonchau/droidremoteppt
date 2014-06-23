@@ -9,83 +9,89 @@
         android:id="@+id/gestures"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/layoutProgress"
+        android:layout_above="@+id/progressBar"
         android:eventsInterceptionEnabled="true"
         android:orientation="vertical" >
 
-        <ImageView
-            android:id="@+id/imgPPT"
+        <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="@android:color/transparent"
-            android:contentDescription="@string/img_slide_description"
-            android:scaleType="fitCenter"
-            android:src="@drawable/icon" >
-        </ImageView>
+            android:layout_height="fill_parent" >
 
-        <TextView
-            android:id="@+id/notesView"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:scrollbars="vertical"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            <ImageView
+                android:id="@+id/imgPPT"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/img_slide_description"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon" >
+            </ImageView>
 
-        <TextView
-            android:id="@+id/slideCounter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right|top"
-            android:text="0/0"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:visibility="visible" />
+            <TextView
+                android:id="@+id/notesView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:layout_below="@+id/toggleScreen"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/slideCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="0/0"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="visible" />
+
+            <ToggleButton
+                android:id="@+id/toggleScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:textOff="Black"
+                android:textOn="Unblack" />
+        </RelativeLayout>
     </android.gesture.GestureOverlayView>
 
-    <RelativeLayout
-        android:id="@+id/layoutProgress"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/layoutControls"
-        android:orientation="horizontal"
-        android:paddingBottom="5dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:paddingTop="5dp" >
-
-        <ImageButton
-            android:id="@+id/btnNext"
-            android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:layout_alignParentRight="true"
-            android:contentDescription="@string/img_forward_description"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_menu_forward"
-            android:visibility="visible" />
-
-        <ImageButton
-            android:id="@+id/btnPrev"
-            android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:layout_alignParentLeft="true"
-            android:contentDescription="@string/img_back_description"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_menu_back"
-            android:visibility="visible" />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="65dp"
-            android:layout_marginRight="65dp" />
-    </RelativeLayout>
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
 
     <TableLayout
         android:id="@+id/layoutControls"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" >
+
+        <TableRow>
+
+            <ImageButton
+                android:id="@+id/btnPrev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/img_back_description"
+                android:src="@drawable/ic_menu_back"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/img_forward_description"
+                android:src="@drawable/ic_menu_forward"
+                android:visibility="visible" />
+        </TableRow>
 
         <TableRow>
 
@@ -107,21 +113,11 @@
         <TableRow>
 
             <ToggleButton
-                android:id="@+id/toggleScreen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textOff="Black"
-                android:textOn="Unblack" />
-        </TableRow>
-
-        <TableRow>
-
-            <ToggleButton
                 android:id="@+id/toggleNotes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:drawableLeft="@android:drawable/ic_menu_edit"
                 android:textOff="Notes"
                 android:textOn="Slides" />
 
@@ -130,8 +126,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textOff="L"
-                android:textOn="P" />
+                android:drawableLeft="@android:drawable/ic_menu_rotate"
+                android:textOff="Rotate"
+                android:textOn="Rotate" />
         </TableRow>
     </TableLayout>
 
